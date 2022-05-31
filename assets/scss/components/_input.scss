@@ -1,0 +1,22 @@
+.input-field {
+	position: relative;
+
+	input {
+		color: #fff;
+		@extend %fs-1;
+		width: 100%;
+		padding: 15px 16px;
+		border-radius: 10px;
+		transition: all 0.2s linear;
+		background-color: transparent;
+		border: 1px solid rgba(77, 77, 77, 1);
+
+		&::placeholder {
+			opacity: 0.5;
+		}
+
+		&:focus {
+			border-color: #fff;
+		}
+	}
+}
