@@ -31,7 +31,21 @@ button {
 	}
 }
 
+a {
+	text-decoration: none;
+	&:hover,
+	&:focus {
+		color: inherit;
+	}
+}
+
 button {
 	display: inline-block;
 	background-color: transparent;
+}
+
+body {
+	// font-family: "metro-bold";
+	font-weight: 400;
+	font-family: "Inter", sans-serif;
 }

@@ -33,8 +33,232 @@ button:focus {
   box-shadow: none;
 }
 
+a {
+  text-decoration: none;
+}
+
+a:hover, a:focus {
+  color: inherit;
+}
+
 button {
   display: inline-block;
   background-color: transparent;
+}
+
+body {
+  font-weight: 400;
+  font-family: "Inter", sans-serif;
+}
+
+.button {
+  color: #fff;
+  font-size: 14px;
+  z-index: 1;
+  position: relative;
+  font-weight: 600;
+  overflow: hidden;
+  padding: 12px 35px;
+  border-radius: 6px;
+  line-height: 16.94px;
+  display: inline-block;
+  text-transform: uppercase;
+  border: 1px solid #ffffff;
+  background-color: transparent;
+  transition: all 0.3s cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+.button:hover {
+  color: #000;
+  background-color: transparent;
+}
+
+.button::after {
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  z-index: -1;
+  position: absolute;
+  mix-blend-mode: lighten;
+  background-color: #fff;
+  transition: all 0.3s cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+.button:hover::after {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+}
+
+.banner {
+  overflow: hidden;
+  position: relative;
+}
+
+.banner .swiper-slide {
+  z-index: 1;
+  display: flex;
+  height: 100vh;
+  position: relative;
+  align-items: center;
+}
+
+@media (max-width: 767px) {
+  .banner .swiper-slide {
+    height: auto;
+    padding: 120px 0px;
+  }
+}
+
+.banner .swiper-slide::after {
+  top: 0;
+  left: 0;
+  z-index: -1;
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: linear-gradient(107.15deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.47) 50%, rgba(0, 0, 0, 0) 100%);
+}
+
+.banner .swiper-pagination {
+  top: 50%;
+  width: auto;
+  bottom: auto;
+  display: flex;
+  overflow: hidden;
+  position: absolute;
+  left: 28px !important;
+  flex-direction: column;
+}
+
+@media (max-width: 767px) {
+  .banner .swiper-pagination {
+    flex-direction: row;
+    top: auto;
+    bottom: 24px;
+    left: 50% !important;
+    transform: translateX(-50%);
+  }
+}
+
+.banner .swiper-pagination-bullet {
+  opacity: 1;
+  color: #fff;
+  font-weight: 300;
+  font-size: 14px;
+  display: block;
+  border-radius: 0%;
+  position: relative;
+  margin: 0px !important;
+  width: auto !important;
+  height: auto !important;
+  transition: all 0.3s linear;
+  margin-bottom: 8px !important;
+  background-color: transparent !important;
+}
+
+@media (max-width: 767px) {
+  .banner .swiper-pagination-bullet {
+    margin: 0 !important;
+    margin-right: 8px !important;
+  }
+}
+
+.banner .swiper-pagination-bullet::after {
+  content: "";
+  top: 100%;
+  left: 50%;
+  width: 1px;
+  height: 0px;
+  position: absolute;
+  background-color: #fff;
+  transform: translateX(-50%);
+  transition: all 0.3s linear;
+}
+
+@media (max-width: 767px) {
+  .banner .swiper-pagination-bullet::after {
+    top: 50%;
+    left: auto;
+    right: -32px;
+    transform: translateX(0);
+    width: 0px;
+    height: 1px;
+  }
+}
+
+.banner .swiper-pagination-bullet-active {
+  margin-bottom: 65px !important;
+}
+
+@media (max-width: 767px) {
+  .banner .swiper-pagination-bullet-active {
+    margin: 0px !important;
+    margin-right: 40px !important;
+  }
+}
+
+.banner .swiper-pagination-bullet-active::after {
+  height: 60px;
+}
+
+@media (max-width: 767px) {
+  .banner .swiper-pagination-bullet-active::after {
+    width: 30px;
+    height: 1px;
+  }
+}
+
+.banner-content {
+  text-align: center;
+}
+
+.banner-content-text {
+  margin-bottom: 44px;
+}
+
+@media (max-width: 767px) {
+  .banner-content-text {
+    margin-bottom: 32px;
+  }
+}
+
+.banner-content h2,
+.banner-content p {
+  color: #fff;
+}
+
+.banner-content h2 {
+  font-size: 44px;
+  line-height: 44px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  font-family: "metro-regular";
+}
+
+@media (max-width: 767px) {
+  .banner-content h2 {
+    font-size: 28px;
+    line-height: 38px;
+    margin-bottom: 6px;
+  }
+}
+
+.banner-content p {
+  font-size: 16px;
+  max-width: 620px;
+  margin: 0px auto;
+  line-height: 19.36px;
+}
+
+@media (max-width: 767px) {
+  .banner-content p {
+    font-size: 14px;
+    line-height: 18px;
+    max-width: 100%;
+  }
 }
 /*# sourceMappingURL=main.css.map */

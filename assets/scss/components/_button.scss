@@ -1,0 +1,39 @@
+.button {
+	color: #fff;
+	font-size: 14px;
+	z-index: 1;
+	position: relative;
+	font-weight: 600;
+	overflow: hidden;
+	padding: 12px 35px;
+	border-radius: 6px;
+	line-height: 16.94px;
+	display: inline-block;
+	text-transform: uppercase;
+	border: 1px solid #ffffff;
+	background-color: transparent;
+	transition: all 0.3s cubic-bezier(0.42, 0, 0.58, 1);
+
+	&:hover {
+		color: #000;
+		background-color: transparent;
+	}
+	&::after {
+		content: "";
+		top: 0;
+		left: 0;
+		width: 0;
+		height: 100%;
+		z-index: -1;
+		position: absolute;
+		mix-blend-mode: lighten;
+		background-color: #fff;
+		transition: all 0.3s cubic-bezier(0.42, 0, 0.58, 1);
+	}
+
+	&:hover::after {
+		width: 100%;
+		height: 100%;
+		background-color: #fff;
+	}
+}
