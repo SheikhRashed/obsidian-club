@@ -415,8 +415,8 @@ body {
 
 .header .mobile-menu ul {
   width: 85%;
-  padding: 24px 0px;
   margin: 0px auto;
+  padding: 24px 0px;
 }
 
 @media (max-width: 767px) {
