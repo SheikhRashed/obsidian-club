@@ -72,9 +72,9 @@ body {
 }
 
 .button {
+  z-index: 1;
   color: #fff;
   font-size: 14px;
-  z-index: 1;
   position: relative;
   font-weight: 600;
   overflow: hidden;
@@ -498,8 +498,8 @@ body {
   .banner .swiper-pagination {
     top: auto;
     bottom: 24px;
-    flex-direction: row;
     left: 50% !important;
+    flex-direction: row;
     transform: translateX(-50%);
   }
 }
@@ -620,6 +620,32 @@ body {
     line-height: 18px;
     max-width: 100%;
   }
+}
+
+.partner {
+  position: relative;
+  padding: 60px 0px;
+  background: linear-gradient(180deg, #000000 0%, #121313 100%);
+}
+
+.partner .swiper-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.partner-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.partner-content a img {
+  filter: grayscale(100%);
+  transition: all 0.3s linear;
+}
+
+.partner-content a img:hover {
+  filter: grayscale(0%);
 }
 
 .footer {

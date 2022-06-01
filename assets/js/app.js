@@ -32,17 +32,45 @@ function myFunction() {
 	}
 }
 
-var swiper = new Swiper(".bannerSlide", {
-	loop: true,
-	// autoplay: {
-	// 	delay: 1800,
-	// 	disableOnInteraction: false,
-	// },
-	pagination: {
-		el: ".swiper-pagination",
-		clickable: true,
-		renderBullet: function (index, className) {
-			return '<p class="' + className + '">' + ` 0${index + 1} ` + "</p>"
+if (document.querySelector(".bannerSlide")) {
+	var swiper = new Swiper(".bannerSlide", {
+		loop: true,
+		autoplay: {
+			delay: 1800,
+			disableOnInteraction: false,
 		},
-	},
-})
+		pagination: {
+			el: ".swiper-pagination",
+			clickable: true,
+			renderBullet: function (index, className) {
+				return '<p class="' + className + '">' + ` 0${index + 1} ` + "</p>"
+			},
+		},
+	})
+}
+
+if (document.querySelector(".partnerSlider")) {
+	var swiper = new Swiper(".partnerSlider", {
+		loop: true,
+		freeMode: true,
+		slidesPerView: 5,
+		spaceBetween: 44,
+		slidesPerView: 1,
+		spaceBetween: 24,
+		autoplay: {
+			delay: 1800,
+			disableOnInteraction: false,
+		},
+
+		breakpoints: {
+			575: {
+				slidesPerView: 2,
+				spaceBetween: 40,
+			},
+			1024: {
+				slidesPerView: 5,
+				spaceBetween: 50,
+			},
+		},
+	})
+}

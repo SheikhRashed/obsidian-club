@@ -9,10 +9,17 @@
 	}
 
 	&-content {
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		a {
 			img {
-				filter: grayscale(1);
+				filter: grayscale(100%);
 				transition: all 0.3s linear;
+
+				&:hover {
+					filter: grayscale(0%);
+				}
 			}
 		}
 	}

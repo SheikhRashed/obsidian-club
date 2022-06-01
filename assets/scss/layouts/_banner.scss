@@ -45,8 +45,8 @@
 			@include max(767px) {
 				top: auto;
 				bottom: 24px;
-				flex-direction: row;
 				left: 50% !important;
+				flex-direction: row;
 				transform: translateX(-50%);
 			}
 
