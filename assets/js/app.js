@@ -65,11 +65,12 @@ if (document.querySelector(".partnerSlider")) {
 		breakpoints: {
 			575: {
 				slidesPerView: 2,
-				spaceBetween: 40,
+			},
+			767: {
+				slidesPerView: 3,
 			},
 			1024: {
-				slidesPerView: 5,
-				spaceBetween: 50,
+				slidesPerView: 6,
 			},
 		},
 	})

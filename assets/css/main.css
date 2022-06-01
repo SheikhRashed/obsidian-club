@@ -469,6 +469,7 @@ body {
   .banner .swiper-slide {
     height: auto;
     padding: 120px 0px;
+    padding-top: 220px;
   }
 }
 

@@ -13,6 +13,7 @@
 			@include max(767px) {
 				height: auto;
 				padding: 120px 0px;
+				padding-top: 220px;
 			}
 
 			&::after {
