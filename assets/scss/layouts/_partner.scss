@@ -1,0 +1,19 @@
+.partner {
+	position: relative;
+	padding: 60px 0px;
+	background: linear-gradient(180deg, #000000 0%, #121313 100%);
+
+	.swiper-wrapper {
+		display: flex;
+		align-items: center;
+	}
+
+	&-content {
+		a {
+			img {
+				filter: grayscale(1);
+				transition: all 0.3s linear;
+			}
+		}
+	}
+}

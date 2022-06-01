@@ -43,9 +43,9 @@
 			flex-direction: column;
 
 			@include max(767px) {
-				flex-direction: row;
 				top: auto;
 				bottom: 24px;
+				flex-direction: row;
 				left: 50% !important;
 				transform: translateX(-50%);
 			}
