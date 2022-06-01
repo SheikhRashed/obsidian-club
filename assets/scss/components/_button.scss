@@ -37,3 +37,57 @@
 		background-color: #fff;
 	}
 }
+
+.join-btn {
+	color: #fff;
+	@extend %fs-1;
+	font-weight: 600;
+	padding: 12px 24px;
+	border-radius: 6px;
+	display: inline-block;
+	transition: all 0.3s linear;
+	border: 1px solid #ffffff;
+	background-color: transparent;
+
+	&:hover {
+		color: #0b0e16;
+		background-color: #fff;
+		&::after {
+			display: none;
+		}
+	}
+}
+
+// toggle button
+
+.toggle {
+	width: 65px;
+	height: 65px;
+	display: flex;
+	cursor: pointer;
+	overflow: hidden;
+	position: relative;
+	align-items: center;
+	justify-content: center;
+	transition: all 0.1s linear;
+
+	span {
+		width: 40px;
+		height: 3px;
+		position: absolute;
+		border-radius: 4px;
+		background-color: #fff;
+		transition: all 0.3s linear;
+
+		&:nth-child(1) {
+			width: 25px;
+			left: 15px;
+			transform: translateY(-12px);
+		}
+		&:nth-child(2) {
+			width: 15px;
+			left: 15px;
+			transform: translateY(12px);
+		}
+	}
+}

@@ -1,0 +1,242 @@
+.header {
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 999;
+	position: fixed;
+	transition: all 0.3s linear;
+	background: linear-gradient(180deg, rgba(0, 0, 0, 0.503) 0%, #202020 100%);
+
+	&-content {
+		display: flex;
+		padding: 40px 0px;
+		align-items: center;
+		position: relative;
+		justify-content: center;
+
+		@include max(991px) {
+			padding: 18px 0px;
+			overflow: hidden;
+			justify-content: space-between;
+		}
+	}
+
+	&-menu {
+		display: flex;
+		align-items: center;
+
+		@include max(991px) {
+			display: none;
+		}
+
+		li {
+			margin-right: 52px;
+
+			@include max(1440px) {
+				margin-right: 24px;
+			}
+
+			@include max(1200px) {
+				margin-right: 12px;
+			}
+
+			&:nth-last-child(1) {
+				margin: 0;
+			}
+
+			a {
+				@extend %fs-1;
+				color: #fff;
+				white-space: nowrap;
+				display: inline-block;
+				position: relative;
+				text-transform: uppercase;
+
+				&::after {
+					content: "";
+					left: 50%;
+					width: 30px;
+					height: 2px;
+					position: absolute;
+					top: calc(100% + 5px);
+					background-color: #fff;
+					transition: all 0.3s linear;
+					transform: translateX(-50%) scale(0);
+				}
+
+				&:hover::after,
+				&.active-link {
+					transform: translateX(-50%) scale(1);
+				}
+			}
+		}
+
+		&--one {
+			transform: translateX(-55px);
+
+			@include max(1440px) {
+				transform: translateX(-90px);
+			}
+		}
+
+		&--two {
+			transform: translateX(230px);
+
+			@include max(1440px) {
+				transform: translateX(165px);
+			}
+
+			@include max(1200px) {
+				transform: translateX(160px);
+			}
+		}
+	}
+
+	&-logo {
+		.logo-lg,
+		.logo-sm {
+			top: 0;
+			left: 50%;
+			position: absolute;
+			transform: translate(-50%, 0);
+			transition: all 0.4s ease-in-out;
+		}
+
+		.logo-lg {
+			@include max(1440px) {
+				left: calc(50% - 20px);
+			}
+
+			@include max(991px) {
+				display: none;
+			}
+		}
+
+		.logo-sm {
+			transform: translate(-50%, 50%);
+			@include min(992px) {
+				opacity: 0;
+			}
+
+			@include max(991px) {
+				left: 0;
+				transform: translate(0, 50%);
+			}
+		}
+	}
+
+	.toggle {
+		@include min(992px) {
+			display: none;
+		}
+		&.active {
+			transform: translateY(3px);
+			box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+
+			span {
+				// background: linear-gradient(180deg, #000000 0%, #202020 100%);
+
+				&:nth-child(1) {
+					width: 40px;
+					transition-delay: 0.03s;
+					transform: translateY(0px) rotate(45deg);
+				}
+				&:nth-child(2) {
+					width: 40px;
+					transition-delay: 0.06s;
+					transform: translateY(0px) rotate(315deg);
+				}
+				&:nth-child(3) {
+					transform: translateX(60px);
+				}
+			}
+		}
+	}
+
+	.mobile-action {
+		display: flex;
+		align-items: center;
+		@include min(992px) {
+			display: none;
+		}
+		.join-btn {
+			font-size: 12px;
+			padding: 8px 12px;
+			margin-right: 24px;
+
+			@include min(992px) {
+				display: none;
+			}
+
+			@include max(767px) {
+				margin-right: 6px;
+			}
+		}
+	}
+
+	.mobile-menu {
+		left: 0;
+		top: 100%;
+		width: 100%;
+		opacity: 0;
+		z-index: 99;
+		position: absolute;
+		pointer-events: none;
+		// background-color: #fff;
+		transition: all 0.3s linear;
+		transform: translateY(15px);
+		background: linear-gradient(180deg, #000000 0%, #202020 100%);
+
+		@include min(991px) {
+			display: none;
+		}
+
+		&.active {
+			opacity: 1;
+			pointer-events: initial;
+			transform: translateY(0px);
+		}
+
+		ul {
+			width: 85%;
+			padding: 24px 0px;
+			margin: 0px auto;
+			// text-align: center;
+
+			@include max(767px) {
+				width: 95%;
+				padding: 12px 0px;
+			}
+
+			li {
+				a {
+					width: 100%;
+					color: #fff;
+					@extend %fs-1;
+					padding: 6px 12px;
+					display: inline-block;
+					text-transform: uppercase;
+					transition: all 0.3s linear;
+					&:hover {
+						color: #000;
+						background-color: #fff;
+					}
+				}
+			}
+		}
+	}
+
+	&.sticky {
+		background: linear-gradient(180deg, #000000 0%, #202020 100%);
+		.header {
+			&-logo {
+				.logo-lg {
+					transform: translate(-50%, -100%);
+				}
+				.logo-sm {
+					opacity: 1;
+				}
+			}
+		}
+	}
+}
