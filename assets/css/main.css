@@ -1,4 +1,4 @@
-.join-btn, .input-field input, .header-menu li a, .header .mobile-menu ul li a, .info-text blockquote p, .footer-top p, .footer-copyright p, .footer-info li p, .footer-contact .button {
+.join-btn, .input-field input, .header-menu li a, .header .mobile-menu ul li a, .info-text blockquote p, .booking-info p, .footer-top p, .footer-copyright p, .footer-info li p, .footer-contact .button {
   font-size: 14px;
   font-weight: 400;
   line-height: 16.94px;
@@ -783,6 +783,116 @@ body {
   .info-text .button {
     margin-top: 12px;
   }
+}
+
+.booking {
+  overflow: hidden;
+  position: relative;
+  padding: 86px 0px;
+  background-color: #0b0e16;
+}
+
+@media (max-width: 767px) {
+  .booking {
+    padding: 60px 0px;
+  }
+}
+
+.booking-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (max-width: 767px) {
+  .booking-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.booking-actions {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+@media (max-width: 767px) {
+  .booking-actions {
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 575px) {
+  .booking-actions {
+    width: 100%;
+    flex-direction: column;
+  }
+}
+
+.booking-actions a {
+  width: 100%;
+  margin-bottom: 18px;
+  white-space: nowrap;
+}
+
+@media (max-width: 767px) {
+  .booking-actions a {
+    margin: 0;
+    margin-right: 12px;
+  }
+}
+
+@media (max-width: 575px) {
+  .booking-actions a {
+    margin: 0;
+    margin-bottom: 12px;
+  }
+}
+
+.booking-actions a:nth-child(1) {
+  color: #0b0e16;
+  background-color: #fff;
+}
+
+.booking-actions a:nth-last-child(1) {
+  margin: 0;
+}
+
+.booking-info {
+  margin-right: 60px;
+}
+
+@media (max-width: 767px) {
+  .booking-info {
+    margin: 0;
+    margin-bottom: 24px;
+  }
+}
+
+.booking-info h2 {
+  color: #fff;
+  font-size: 44px;
+  line-height: 54px;
+  margin-bottom: 18px;
+  text-transform: uppercase;
+  font-family: "metro-regular";
+}
+
+@media (max-width: 767px) {
+  .booking-info h2 {
+    font-size: 28px;
+    line-height: 38px;
+    margin-bottom: 12px;
+  }
+}
+
+.booking-info p {
+  margin: 0;
+  max-width: 750px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.808);
 }
 
 .footer {
