@@ -494,6 +494,12 @@ section .section-heading {
   overflow: visible;
 }
 
+@media (max-width: 991px) {
+  .header--login .header-content {
+    padding: 12px 0px;
+  }
+}
+
 .header--login .header-menu li {
   margin-right: 48px;
 }
@@ -587,6 +593,14 @@ section .section-heading {
   height: 100vh;
   align-items: center;
   justify-content: center;
+}
+
+@media (max-width: 991px) {
+  .banner-two {
+    height: auto;
+    padding: 120px 0px;
+    padding-top: 240px;
+  }
 }
 
 .banner .swiper-slide {
