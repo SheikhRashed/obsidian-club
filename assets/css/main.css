@@ -490,6 +490,13 @@ section .section-heading {
   position: relative;
 }
 
+.banner-two {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
 .banner .swiper-slide {
   z-index: 1;
   display: flex;
@@ -610,6 +617,18 @@ section .section-heading {
   text-align: center;
 }
 
+.banner-content .logo {
+  width: 180px;
+  margin: 0px auto;
+  margin-bottom: 45px;
+}
+
+.banner-content .logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .banner-content-text {
   margin-bottom: 44px;
 }
@@ -680,6 +699,12 @@ section .section-heading {
 
 .partner-content a img:hover {
   filter: grayscale(0%);
+}
+
+.partner-action {
+  display: flex;
+  margin-top: 50px;
+  justify-content: center;
 }
 
 .information {
