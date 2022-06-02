@@ -1,0 +1,80 @@
+.perks {
+	padding: 90px 0px;
+
+	@include max(991px) {
+		padding: 60px 0px;
+	}
+
+	&-content {
+		display: grid;
+		text-align: center;
+		grid-template-columns: repeat(3, 1fr);
+
+		@include max(991px) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@include max(575px) {
+			grid-template-columns: 1fr;
+		}
+
+		.perks-item {
+			padding: 60px 30px;
+			border: 1px solid rgba(255, 255, 255, 0.1);
+
+			@include max(575px) {
+				padding: 30px;
+			}
+
+			&:nth-child(1),
+			&:nth-child(2),
+			&:nth-child(3) {
+				@include min(992px) {
+					border-top-color: transparent;
+					border-bottom-color: transparent;
+				}
+			}
+
+			&:nth-child(4),
+			&:nth-child(5),
+			&:nth-child(6) {
+				@include min(992px) {
+					border-bottom-color: transparent;
+				}
+			}
+
+			&:nth-child(1),
+			&:nth-child(4) {
+				@include min(992px) {
+					border-left-color: transparent;
+				}
+			}
+			&:nth-child(3),
+			&:nth-child(6) {
+				@include min(992px) {
+					border-right-color: transparent;
+				}
+			}
+
+			.icon {
+				margin-bottom: 20px;
+				display: inline-block;
+			}
+
+			h2 {
+				color: #fff;
+				font-size: 20px;
+				line-height: 20px;
+				margin-bottom: 22px;
+				text-transform: capitalize;
+				font-family: "metro-regular";
+			}
+
+			p {
+				margin: 0;
+				@extend %fs-1;
+				color: rgba(255, 255, 255, 0.605);
+			}
+		}
+	}
+}

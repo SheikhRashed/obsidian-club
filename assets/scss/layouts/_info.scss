@@ -1,16 +1,27 @@
 .information {
 	overflow: hidden;
 	position: relative;
+	padding-top: 130px;
 	background: linear-gradient(180deg, #000000 0%, #0c1431 100%);
+
+	@include max(991px) {
+		padding: 0px;
+	}
+
+	.info {
+		padding-bottom: 305px;
+
+		@include max(991px) {
+			padding: 0px;
+		}
+	}
 }
 
 .info {
 	position: relative;
 	padding: 200px 0px;
-
 	@include max(991px) {
-		padding-top: 0px;
-		padding-bottom: 60px;
+		padding: 0;
 	}
 
 	&-wrapper {
@@ -54,6 +65,11 @@
 				position: relative;
 				margin-bottom: 60px;
 				transform: translateY(0);
+			}
+
+			@include max(767px) {
+				height: 320px;
+				margin-bottom: 24px;
 			}
 
 			img {
