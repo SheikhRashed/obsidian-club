@@ -846,8 +846,42 @@ section .section-heading {
   left: 0;
 }
 
+.info-enjoy {
+  background: linear-gradient(180deg, #000000 0%, #111113 100%);
+}
+
+.info-enjoy .info {
+  padding: 240px 0px;
+}
+
+@media (max-width: 991px) {
+  .info-enjoy .info {
+    padding: 0px;
+    padding-bottom: 60px;
+  }
+}
+
+.experience-info {
+  background: linear-gradient(180deg, #0e0e0e 0%, #0a0b24 100%);
+}
+
+.experience-info .info {
+  padding: 250px 0px;
+}
+
+@media (max-width: 991px) {
+  .experience-info .info {
+    padding: 0px;
+    padding-bottom: 60px;
+  }
+}
+
 .perks {
   padding: 90px 0px;
+}
+
+.perks--two {
+  background: linear-gradient(180deg, #0a0b24 0%, #000000 100%);
 }
 
 @media (max-width: 991px) {

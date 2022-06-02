@@ -1,6 +1,10 @@
 .perks {
 	padding: 90px 0px;
 
+	&--two {
+		background: linear-gradient(180deg, #0a0b24 0%, #000000 100%);
+	}
+
 	@include max(991px) {
 		padding: 60px 0px;
 	}

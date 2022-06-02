@@ -149,4 +149,28 @@
 			}
 		}
 	}
+
+	&-enjoy {
+		background: linear-gradient(180deg, #000000 0%, #111113 100%);
+
+		.info {
+			padding: 240px 0px;
+			@include max(991px) {
+				padding: 0px;
+				padding-bottom: 60px;
+			}
+		}
+	}
+}
+
+.experience-info {
+	background: linear-gradient(180deg, #0e0e0e 0%, #0a0b24 100%);
+
+	.info {
+		padding: 250px 0px;
+		@include max(991px) {
+			padding: 0px;
+			padding-bottom: 60px;
+		}
+	}
 }
