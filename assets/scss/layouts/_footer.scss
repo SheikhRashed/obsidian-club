@@ -102,11 +102,22 @@
 				margin-right: 10px;
 				display: inline-block;
 			}
-			p {
+			p,
+			a {
+				color: rgba(255, 255, 255, 0.7);
 				margin: 0;
 				opacity: 0.7;
 				@extend %fs-1;
+				font-weight: 500;
 				text-transform: lowercase;
+				transition: all 0.3s linear;
+
+				&:hover {
+					color: #fff;
+				}
+			}
+			a {
+				text-transform: capitalize;
 			}
 		}
 	}
@@ -153,6 +164,15 @@
 
 			&:hover::after {
 				background-color: transparent;
+			}
+		}
+	}
+
+	&--two {
+		padding-top: 60px;
+		.footer {
+			&-top {
+				margin-bottom: 45px;
 			}
 		}
 	}

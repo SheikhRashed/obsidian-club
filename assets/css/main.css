@@ -1,4 +1,5 @@
-.join-btn, .input-field input, .section-heading p, .header-menu li a, .header .mobile-menu ul li a, .info-text blockquote p, .perks-content .perks-item p, .booking-info p, .faqs .accordion-body blockquote p, .footer-top p, .footer-copyright p, .footer-info li p, .footer-contact .button {
+.join-btn, .input-field input, .section-heading p, .header-menu li a, .header .mobile-menu ul li a, .info-text blockquote p, .perks-content .perks-item p, .booking-info p, .faqs .accordion-body blockquote p, .footer-top p, .footer-copyright p, .footer-info li p,
+.footer-info li a, .footer-contact .button {
   font-size: 14px;
   font-weight: 400;
   line-height: 16.94px;
@@ -840,6 +841,11 @@ section .section-heading {
   }
 }
 
+.info--left .info-content-img {
+  right: auto;
+  left: 0;
+}
+
 .perks {
   padding: 90px 0px;
 }
@@ -1216,10 +1222,23 @@ section .section-heading {
   display: inline-block;
 }
 
-.footer-info li p {
+.footer-info li p,
+.footer-info li a {
+  color: rgba(255, 255, 255, 0.7);
   margin: 0;
   opacity: 0.7;
+  font-weight: 500;
   text-transform: lowercase;
+  transition: all 0.3s linear;
+}
+
+.footer-info li p:hover,
+.footer-info li a:hover {
+  color: #fff;
+}
+
+.footer-info li a {
+  text-transform: capitalize;
 }
 
 .footer-social-link {
@@ -1265,5 +1284,13 @@ section .section-heading {
 
 .footer-contact .button:hover::after {
   background-color: transparent;
+}
+
+.footer--two {
+  padding-top: 60px;
+}
+
+.footer--two .footer-top {
+  margin-bottom: 45px;
 }
 /*# sourceMappingURL=main.css.map */

@@ -140,4 +140,13 @@
 			}
 		}
 	}
+
+	&--left {
+		.info {
+			&-content-img {
+				right: auto;
+				left: 0;
+			}
+		}
+	}
 }
