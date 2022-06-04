@@ -275,6 +275,86 @@ body {
   transform: scale(1.1);
 }
 
+.obsidian-card {
+  overflow: hidden;
+  position: relative;
+}
+
+.obsidian-card__img {
+  width: 100%;
+  opacity: 0.6;
+  height: 511px;
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  transition: all 0.3s linear;
+}
+
+@media (max-width: 767px) {
+  .obsidian-card__img {
+    height: 420px;
+  }
+}
+
+.obsidian-card__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1);
+  transition: all 0.3s linear;
+}
+
+.obsidian-card__info {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 30px 20px;
+  padding-bottom: 42px;
+  position: absolute;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.546875) 50%, #000000 100%);
+}
+
+.obsidian-card__info h2,
+.obsidian-card__info p {
+  text-transform: uppercase;
+}
+
+.obsidian-card__info h2 {
+  color: #fff;
+  font-size: 34px;
+  font-weight: 400;
+  margin-bottom: 5px;
+  line-height: 41.15px;
+}
+
+@media (max-width: 767px) {
+  .obsidian-card__info h2 {
+    font-size: 24px;
+    line-height: 36px;
+  }
+}
+
+.obsidian-card__info p {
+  color: #f79c32;
+  font-size: 16px;
+  line-height: 19.36px;
+}
+
+@media (max-width: 767px) {
+  .obsidian-card__info p {
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+
+.obsidian-card:hover .obsidian-card__img {
+  opacity: 1;
+}
+
+.obsidian-card:hover .obsidian-card__img img {
+  transform: scale(1.1);
+}
+
 section .section-heading {
   margin-bottom: 110px;
 }
@@ -397,12 +477,12 @@ section .section-heading {
   height: 2px;
   position: absolute;
   top: calc(100% + 5px);
-  background-color: #fff;
+  background-color: transparent;
   transition: all 0.3s linear;
   transform: translateX(-50%) scale(0);
 }
 
-.header-menu li a:hover::after, .header-menu li a.active-link {
+.header-menu li a:hover::after {
   transform: translateX(-50%) scale(1);
 }
 
@@ -598,7 +678,8 @@ section .section-heading {
   color: #fff;
 }
 
-.header--login .header-menu li a:hover::after {
+.header--login .header-menu li a:hover::after,
+.header--login .header-menu li a .active-link {
   background: linear-gradient(90deg, rgba(196, 196, 196, 0) 0%, #ff9f2f 52.08%, rgba(196, 196, 196, 0) 100%);
 }
 
@@ -1378,6 +1459,12 @@ section .section-heading {
   display: flex;
   margin-top: 75px;
   justify-content: center;
+}
+
+.obsidian {
+  position: relative;
+  padding: 100px 0px;
+  background: linear-gradient(180deg, #000000 0%, #101011 100%);
 }
 
 .footer {

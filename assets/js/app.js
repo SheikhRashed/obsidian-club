@@ -82,6 +82,10 @@ if (document.querySelector(".upcomingSlider")) {
 		slidesPerView: 1,
 		spaceBetween: 22,
 		loop: true,
+		autoplay: {
+			delay: 1800,
+			disableOnInteraction: false,
+		},
 		centeredSlides: true,
 		breakpoints: {
 			480: {
@@ -97,6 +101,28 @@ if (document.querySelector(".upcomingSlider")) {
 			},
 			1200: {
 				slidesPerView: 6,
+			},
+		},
+	})
+}
+
+if (document.querySelector(".obsidianSlider")) {
+	var swiper = new Swiper(".obsidianSlider", {
+		slidesPerView: 1,
+		spaceBetween: 22,
+		loop: true,
+		autoplay: {
+			delay: 1600,
+			disableOnInteraction: false,
+		},
+		centeredSlides: true,
+		breakpoints: {
+			575: {
+				slidesPerView: 2,
+			},
+
+			1200: {
+				slidesPerView: 3,
 			},
 		},
 	})
