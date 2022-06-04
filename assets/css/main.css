@@ -5,6 +5,10 @@
   line-height: 16.94px;
 }
 
+.bg-dark-gradient {
+  background: linear-gradient(180deg, #0e0e0e 0%, #0e0f18 100%) !important;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -945,6 +949,66 @@ section .section-heading {
     line-height: 18px;
     max-width: 100%;
   }
+}
+
+.banner-sm {
+  z-index: 1;
+  height: 180px;
+  overflow: hidden;
+  margin-top: 110px;
+  position: relative;
+}
+
+.banner-sm__img {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.banner-sm__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%);
+}
+
+.banner-sm::after {
+  content: "";
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.623);
+}
+
+.banner-sm__content {
+  z-index: 3;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.banner-sm__content h2,
+.banner-sm__content p {
+  text-transform: uppercase;
+}
+
+.banner-sm__content h2 {
+  color: #fff;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  line-height: 33.89px;
+}
+
+.banner-sm__content p {
+  font-size: 14px;
+  line-height: 15.73px;
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .partner {
