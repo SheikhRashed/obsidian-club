@@ -1043,6 +1043,56 @@ section .section-heading {
   justify-content: center;
 }
 
+.partners {
+  overflow: hidden;
+  padding: 80px 0px;
+  position: relative;
+  background-color: #000;
+}
+
+.partners-content {
+  gap: 44px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+@media (max-width: 1440px) {
+  .partners-content {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 991px) {
+  .partners-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 575px) {
+  .partners-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+.partners-content-item {
+  text-align: center;
+}
+
+.partners-content-item a img {
+  filter: grayscale(100%);
+  transition: all 0.3s linear;
+}
+
+.partners-content-item a img:hover {
+  filter: grayscale(0);
+}
+
+.partners-action {
+  display: flex;
+  margin-top: 100px;
+  justify-content: center;
+}
+
 .information {
   overflow: hidden;
   position: relative;
