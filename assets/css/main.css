@@ -1,4 +1,4 @@
-.join-btn, .input-field input, .section-heading p, .header-menu li a, .header .mobile-menu ul li a, .header--login .mobile-action .profile-info a, .info-text blockquote p, .perks-content .perks-item p, .booking-info p, .faqs .accordion-body blockquote p, .footer-top p, .footer-copyright p, .footer-info li p,
+.join-btn, .input-field input, .event-card__date p, .section-heading p, .header-menu li a, .header .mobile-menu ul li a, .header--login .mobile-action .profile-info a, .info-text blockquote p, .perks-content .perks-item p, .booking-info p, .faqs .accordion-body blockquote p, .footer-top p, .footer-copyright p, .footer-info li p,
 .footer-info li a, .footer-contact .button {
   font-size: 14px;
   font-weight: 400;
@@ -188,6 +188,91 @@ body {
 
 .input-field input:focus {
   border-color: #fff;
+}
+
+.event-card {
+  position: relative;
+}
+
+.event-card__img {
+  width: 100%;
+  height: 260px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+.event-card__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1);
+  transition: all 0.3s linear;
+}
+
+.event-card__name, .event-card__date {
+  position: absolute;
+}
+
+.event-card__name {
+  left: 50%;
+  width: 90%;
+  bottom: 20px;
+  transform: translateX(-50%);
+  border: 24px solid #141414;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+}
+
+.event-card__name p {
+  font-size: 18px;
+  line-height: 21.78px;
+  text-transform: uppercase;
+  font-weight: 600;
+  top: 50%;
+  left: 50%;
+  color: #fff;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.event-card__date {
+  top: -6px;
+  right: 18px;
+  width: 0px;
+  height: 60px;
+  display: flex;
+  padding-top: 4px;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  border: 1px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-top: none;
+  border-left: 20px solid #da6b05;
+  border-right: 20px solid #da6b05;
+}
+
+.event-card__date p {
+  color: #fff;
+  display: flex;
+  font-weight: 600;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.event-card__date p span {
+  font-size: 13px;
+  line-height: 15.73px;
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+.event-card:hover .event-card__img img {
+  transform: scale(1.1);
 }
 
 section .section-heading {
@@ -1275,6 +1360,24 @@ section .section-heading {
 .faqs .accordion-body blockquote p {
   margin: 0;
   color: rgba(255, 255, 255, 0.8);
+}
+
+.upcoming {
+  position: relative;
+  padding: 90px 0px;
+  background: linear-gradient(180deg, #080f25 0%, #000000 100%);
+}
+
+@media (max-width: 991px) {
+  .upcoming {
+    padding: 60px 0px;
+  }
+}
+
+.upcoming-action {
+  display: flex;
+  margin-top: 75px;
+  justify-content: center;
 }
 
 .footer {

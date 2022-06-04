@@ -32,6 +32,7 @@ function myFunction() {
 	}
 }
 
+// Sliders
 if (document.querySelector(".bannerSlide")) {
 	var swiper = new Swiper(".bannerSlide", {
 		loop: true,
@@ -70,6 +71,31 @@ if (document.querySelector(".partnerSlider")) {
 				slidesPerView: 3,
 			},
 			1024: {
+				slidesPerView: 6,
+			},
+		},
+	})
+}
+
+if (document.querySelector(".upcomingSlider")) {
+	var swiper = new Swiper(".upcomingSlider", {
+		slidesPerView: 1,
+		spaceBetween: 22,
+		loop: true,
+		centeredSlides: true,
+		breakpoints: {
+			480: {
+				slidesPerView: 2,
+				centeredSlides: false,
+			},
+			640: {
+				slidesPerView: 3,
+			},
+
+			991: {
+				slidesPerView: 4,
+			},
+			1200: {
 				slidesPerView: 6,
 			},
 		},
