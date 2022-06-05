@@ -1,0 +1,59 @@
+.membership-tier {
+	height: 100vh;
+	padding: 80px 0px;
+	position: relative;
+	background-color: #131313;
+
+	@include max(991px) {
+		height: auto;
+	}
+
+	.heading {
+		display: flex;
+		align-items: center;
+		margin-bottom: 60px;
+		justify-content: space-between;
+
+		@include max(991px) {
+			align-items: flex-start;
+		}
+
+		h2 {
+			color: #fff;
+			font-size: 34px;
+			line-height: 54px;
+			position: relative;
+			padding-bottom: 12px;
+			text-transform: uppercase;
+			font-family: "metro-regular";
+
+			@include max(991px) {
+				font-size: 24px;
+				line-height: 28px;
+				padding-bottom: 12px;
+				margin-bottom: 24px;
+			}
+
+			&::after {
+				content: "";
+				left: 0;
+				top: 100%;
+				width: 120px;
+				height: 2px;
+				position: absolute;
+				background: linear-gradient(
+					90deg,
+					#ff9f2f 0%,
+					rgba(196, 196, 196, 0) 100%
+				);
+			}
+		}
+
+		button {
+			font-size: 14px;
+			line-height: 16.94px;
+			text-transform: uppercase;
+			color: hsla(0, 0%, 100%, 0.5);
+		}
+	}
+}

@@ -4,31 +4,37 @@
 
 const toggleBtn = document.querySelector(".toggleBtn")
 
-toggleBtn.addEventListener("click", (e) => {
-	e.preventDefault()
-	toggleBtn.classList.toggle("active")
+if (toggleBtn) {
+	toggleBtn.addEventListener("click", (e) => {
+		e.preventDefault()
+		toggleBtn.classList.toggle("active")
 
-	document.querySelector(".mobile-menu").classList.toggle("active")
-})
+		document.querySelector(".mobile-menu").classList.toggle("active")
+	})
+}
 
 // Sticky navbar on scroll
 // When the user scrolls the page, execute myFunction
-window.onscroll = function () {
-	myFunction()
-}
 
-// Get the navbar
-var navbar = document.querySelector(".header")
+if (navbar) {
+	var navbar = document.querySelector(".header")
 
-// Get the offset position of the navbar
-var sticky = navbar.offsetTop
+	window.onscroll = function () {
+		myFunction()
+	}
 
-// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
-function myFunction() {
-	if (window.pageYOffset >= 120) {
-		navbar.classList.add("sticky")
-	} else {
-		navbar.classList.remove("sticky")
+	// Get the navbar
+
+	// Get the offset position of the navbar
+	var sticky = navbar.offsetTop
+
+	// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+	function myFunction() {
+		if (window.pageYOffset >= 120) {
+			navbar.classList.add("sticky")
+		} else {
+			navbar.classList.remove("sticky")
+		}
 	}
 }
 
@@ -123,6 +129,27 @@ if (document.querySelector(".obsidianSlider")) {
 
 			1200: {
 				slidesPerView: 3,
+			},
+		},
+	})
+}
+
+if (document.querySelector(".packageSlider")) {
+	var swiper = new Swiper(".packageSlider", {
+		slidesPerView: 1,
+		spaceBetween: 22,
+
+		breakpoints: {
+			575: {
+				slidesPerView: 2,
+			},
+
+			992: {
+				slidesPerView: 3,
+			},
+
+			1200: {
+				slidesPerView: 4,
 			},
 		},
 	})

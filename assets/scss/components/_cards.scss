@@ -170,3 +170,163 @@
 		}
 	}
 }
+
+.membership-card {
+	overflow: hidden;
+	position: relative;
+	border-radius: 20px;
+	padding: 34px 20px;
+	padding-bottom: 20px;
+	transition: all 0.3s linear;
+	background-color: #131313;
+	border: 1px solid #282828;
+
+	&:hover {
+		.membership-card {
+			&__action {
+				.button {
+					color: #000000;
+				}
+			}
+		}
+	}
+
+	&__info {
+		margin-bottom: 35px;
+		img {
+			margin-bottom: 20px;
+			display: inline-block;
+		}
+
+		h2 {
+			color: #fff;
+			font-size: 26px;
+			font-weight: 700;
+			line-height: 31.47px;
+			text-transform: uppercase;
+		}
+	}
+
+	&__pack-info {
+		padding-bottom: 40px;
+		li {
+			display: flex;
+			align-items: center;
+			margin-bottom: 12px;
+
+			img {
+				margin-right: 10px;
+				display: inline-block;
+			}
+
+			p {
+				margin: 0;
+				color: #8f8f8f;
+				font-size: 14px;
+				font-weight: 500;
+				line-height: 16.94px;
+				transition: all 0.2s ease-in;
+
+				&:hover {
+					color: #fff;
+				}
+			}
+		}
+	}
+
+	&__action {
+		.button {
+			border-color: #3a3a3a;
+			transition: all 0.3s linear;
+		}
+	}
+
+	.label {
+		top: 0;
+		right: 0;
+		width: 110px;
+		height: 24px;
+		color: #000;
+		display: flex;
+		font-size: 11px;
+		position: absolute;
+		align-items: center;
+		line-height: 13.31px;
+		background-color: #fff;
+		justify-content: center;
+		text-transform: capitalize;
+		border-top-right-radius: 24px;
+		border-bottom-left-radius: 24px;
+	}
+
+	&--copper {
+		&:hover {
+			border-color: #bc8959;
+			.membership-card {
+				&__action {
+					.button {
+						background: linear-gradient(
+							308.51deg,
+							#975416 -0.02%,
+							#e0bc9b 48.96%,
+							#94663c 100.01%
+						);
+					}
+				}
+			}
+		}
+	}
+
+	&--silver {
+		&:hover {
+			border-color: #d7d7d7;
+			.membership-card {
+				&__action {
+					.button {
+						background: linear-gradient(
+							308.51deg,
+							#777777 -0.02%,
+							#e7e7e7 48.96%,
+							#545454 100.01%
+						);
+					}
+				}
+			}
+		}
+	}
+
+	&--gold {
+		&:hover {
+			border-color: #cc9c2d;
+			.membership-card {
+				&__action {
+					.button {
+						background: linear-gradient(
+							308.51deg,
+							#e4c144 -0.02%,
+							#ab6c0e 50.52%,
+							#eae0ab 100.01%
+						);
+					}
+				}
+			}
+		}
+	}
+
+	&--obsidian {
+		&:hover {
+			border-color: #ff921c;
+			.membership-card {
+				&__action {
+					.button {
+						background: linear-gradient(
+							308.51deg,
+							#fe7e07 -0.02%,
+							#ffde67 100.01%
+						);
+					}
+				}
+			}
+		}
+	}
+}
