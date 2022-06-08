@@ -316,6 +316,15 @@
 	}
 
 	&--obsidian {
+		background: linear-gradient(
+			149.83deg,
+			#2f2e2e 0%,
+			rgba(22, 22, 22, 0.780482) 22.32%,
+			rgba(54, 54, 54, 0.526042) 48.19%,
+			rgba(31, 31, 31, 0.19812) 67.97%,
+			rgba(109, 109, 109, 0) 82.18%
+		);
+
 		&:hover {
 			border-color: #ff921c;
 			.membership-card {
