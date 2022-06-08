@@ -156,49 +156,60 @@ if (document.querySelector(".packageSlider")) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-	var demo1 = new BVSelect({
-		selector: "#monthName",
-		width: "100%",
-		offset: false,
-		breakpoint: 0,
-		searchbox: false,
-		search_autofocus: false,
-		placeholder: "Select Month",
-	})
-	var demo2 = new BVSelect({
-		selector: "#yearName",
-		width: "100%",
-		offset: false,
-		breakpoint: 0,
-		searchbox: false,
-		search_autofocus: false,
-		placeholder: "Select Year",
-	})
-	var demo1 = new BVSelect({
-		selector: "#monthNameTwo",
-		width: "100%",
-		offset: false,
-		breakpoint: 0,
-		searchbox: false,
-		search_autofocus: false,
-		placeholder: "Select Month",
-	})
-	var demo2 = new BVSelect({
-		selector: "#yearNameTwo",
-		width: "100%",
-		offset: false,
-		breakpoint: 0,
-		searchbox: false,
-		search_autofocus: false,
-		placeholder: "Select Year",
-	})
-	var demo2 = new BVSelect({
-		selector: "#summary",
-		width: "100%",
-		offset: false,
-		breakpoint: 0,
-		searchbox: false,
-		search_autofocus: false,
-		placeholder: "Select Year",
-	})
+	if (document.querySelector("#monthName")) {
+		var demo1 = new BVSelect({
+			selector: "#monthName",
+			width: "100%",
+			offset: false,
+			breakpoint: 0,
+			searchbox: false,
+			search_autofocus: false,
+			placeholder: "Select Month",
+		})
+	}
+	if (document.querySelector("#yearName")) {
+		var demo2 = new BVSelect({
+			selector: "#yearName",
+			width: "100%",
+			offset: false,
+			breakpoint: 0,
+			searchbox: false,
+			search_autofocus: false,
+			placeholder: "Select Year",
+		})
+	}
+	if (document.querySelector("#monthNameTwo")) {
+		var demo3 = new BVSelect({
+			selector: "#monthNameTwo",
+			width: "100%",
+			offset: false,
+			breakpoint: 0,
+			searchbox: false,
+			search_autofocus: false,
+			placeholder: "Select Month",
+		})
+	}
+	if (document.querySelector("#yearNameTwo")) {
+		var demo4 = new BVSelect({
+			selector: "#yearNameTwo",
+			width: "100%",
+			offset: false,
+			breakpoint: 0,
+			searchbox: false,
+			search_autofocus: false,
+			placeholder: "Select Year",
+		})
+	}
+
+	if (document.querySelector("#summary")) {
+		var demo5 = new BVSelect({
+			selector: "#summary",
+			width: "100%",
+			offset: false,
+			breakpoint: 0,
+			searchbox: false,
+			search_autofocus: false,
+			placeholder: "Select Year",
+		})
+	}
 })
