@@ -236,6 +236,8 @@
 
 	&__action {
 		.button {
+			width: 100%;
+			text-align: center;
 			border-color: #3a3a3a;
 			transition: all 0.3s linear;
 		}

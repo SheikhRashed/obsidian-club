@@ -21,6 +21,7 @@
 		<!-- Library  -->
 		<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
 		<link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+		<link rel="stylesheet" href="assets/css/bvselect.css" />
 		<!-- Main css -->
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="assets/css/main.css.map" />
@@ -31,192 +32,316 @@
 		<section class="membership-tier">
 			<div class="container">
 				<div class="heading">
-					<h2>Select Membership Tier</h2>
+					<div>
+						<a href="select-package.html">
+							<img src="assets/images/icons/arrow.svg" alt="" />
+						</a>
+						<h2>Make payment</h2>
+					</div>
 					<button>Logout</button>
 				</div>
-
-				<div class="swiper packageSlider">
-					<div class="swiper-wrapper">
-						<div class="swiper-slide">
-							<div class="membership-card membership-card--copper">
-								<div class="membership-card__info">
-									<img src="assets/images/title/copper.png" alt="" />
-									<h2>Copper</h2>
-								</div>
-
-								<ul class="membership-card__pack-info">
-									<li>
-										<img src="assets/images/icons/check.svg" alt="" />
-										<p>Latest updates</p>
+				<!-- Payment  -->
+				<div class="membership-form">
+					<div class="row">
+						<div class="col-lg-8 mb-4">
+							<div class="membership-form__card">
+								<ul class="nav nav-tabs" id="myTab" role="tablist">
+									<li class="nav-item" role="presentation">
+										<button
+											class="nav-link active"
+											id="card-tab"
+											data-bs-toggle="tab"
+											data-bs-target="#card-tab-pane"
+											type="button"
+											role="tab"
+											aria-controls="card-tab-pane"
+											aria-selected="true"
+										>
+											Credit/Debit Card
+										</button>
 									</li>
-									<li>
-										<img src="assets/images/icons/check.svg" alt="" />
-										<p>Limited notifications</p>
-									</li>
-									<li>
-										<img src="assets/images/icons/check.svg" alt="" />
-										<p>24 hour waiting time in pre- verification</p>
-									</li>
-									<li>
-										<img src="assets/images/icons/check.svg" alt="" />
-										<p>Updates available</p>
-									</li>
-									<li>
-										<img src="assets/images/icons/check.svg" alt="" />
-										<p>Lorem ipsum dolar sit amet</p>
+									<li class="nav-item" role="presentation">
+										<button
+											class="nav-link"
+											id="paypal-tab"
+											data-bs-toggle="tab"
+											data-bs-target="#paypal-tab-pane"
+											type="button"
+											role="tab"
+											aria-controls="paypal-tab-pane"
+											aria-selected="false"
+										>
+											Paypal
+										</button>
 									</li>
 								</ul>
+								<div class="tab-content" id="myTabContent">
+									<div
+										class="tab-pane fade show active"
+										id="card-tab-pane"
+										role="tabpanel"
+										aria-labelledby="card-tab"
+										tabindex="0"
+									>
+										<form action="#">
+											<fieldset class="input-field-two">
+												<legend>
+													<label for="card">Name on Card</label>
+												</legend>
+												<input
+													id="card"
+													type="text"
+													name="card"
+													placeholder=""
+												/>
+											</fieldset>
+											<fieldset class="input-field-two">
+												<legend>
+													<label for="cardNumber"
+														>Card Number</label
+													>
+												</legend>
+												<input
+													id="cardNumber"
+													type="text"
+													name="cardNumber"
+													placeholder=""
+												/>
+											</fieldset>
+											<div class="membership-fields">
+												<fieldset class="input-field-two">
+													<legend>
+														<label for="monthName"
+															>Month</label
+														>
+													</legend>
+													<select id="monthName">
+														<option value="1">January</option>
+														<option value="2">
+															February
+														</option>
+														<option value="3">March</option>
+														<option value="4">April</option>
+														<option value="5">May</option>
+														<option value="6">June</option>
+														<option value="7">July</option>
+														<option value="8">August</option>
+														<option value="9">
+															Septembar
+														</option>
+														<option value="10">
+															Octobar
+														</option>
+														<option value="11">
+															Novembar
+														</option>
+														<option value="12">
+															Decembar
+														</option>
+													</select>
+												</fieldset>
+												<fieldset class="input-field-two">
+													<legend>
+														<label for="yearName">Year</label>
+													</legend>
+													<select id="yearName">
+														<option value="1">2022</option>
+														<option value="2">2021</option>
+														<option value="3">2020</option>
+														<option value="4">2019</option>
+														<option value="5">2018</option>
+														<option value="6">2017</option>
+														<option value="7">2016</option>
+														<option value="8">2015</option>
+														<option value="9">2014</option>
+														<option value="10">2013</option>
+														<option value="11">2012</option>
+														<option value="12">2011</option>
+														<option value="13">2010</option>
+													</select>
+												</fieldset>
 
-								<div class="membership-card__action">
-									<a href="#" class="button">Continue</a>
+												<fieldset class="input-field-two">
+													<legend>
+														<label for="cvv">CVV</label>
+													</legend>
+													<input
+														id="cvv"
+														type="text"
+														name="cvv"
+														placeholder="Enter CVV"
+													/>
+												</fieldset>
+											</div>
+										</form>
+									</div>
+									<div
+										class="tab-pane fade"
+										id="paypal-tab-pane"
+										role="tabpanel"
+										aria-labelledby="paypal-tab"
+										tabindex="0"
+									>
+										<form action="#">
+											<fieldset class="input-field-two">
+												<legend>
+													<label for="card">Name on Card</label>
+												</legend>
+												<input
+													id="card"
+													type="text"
+													name="card"
+													placeholder=""
+												/>
+											</fieldset>
+											<fieldset class="input-field-two">
+												<legend>
+													<label for="cardNumber"
+														>Card Number</label
+													>
+												</legend>
+												<input
+													id="cardNumber"
+													type="text"
+													name="cardNumber"
+													placeholder=""
+												/>
+											</fieldset>
+											<div class="membership-fields">
+												<fieldset class="input-field-two">
+													<legend>
+														<label for="monthNameTwo"
+															>Month</label
+														>
+													</legend>
+													<select id="monthNameTwo">
+														<option value="1">January</option>
+														<option value="2">
+															February
+														</option>
+														<option value="3">March</option>
+														<option value="4">April</option>
+														<option value="5">May</option>
+														<option value="6">June</option>
+														<option value="7">July</option>
+														<option value="8">August</option>
+														<option value="9">
+															Septembar
+														</option>
+														<option value="10">
+															Octobar
+														</option>
+														<option value="11">
+															Novembar
+														</option>
+														<option value="12">
+															Decembar
+														</option>
+													</select>
+												</fieldset>
+												<fieldset class="input-field-two">
+													<legend>
+														<label for="yearNameTwo"
+															>Year</label
+														>
+													</legend>
+													<select id="yearNameTwo">
+														<option value="1">2022</option>
+														<option value="2">2021</option>
+														<option value="3">2020</option>
+														<option value="4">2019</option>
+														<option value="5">2018</option>
+														<option value="6">2017</option>
+														<option value="7">2016</option>
+														<option value="8">2015</option>
+														<option value="9">2014</option>
+														<option value="10">2013</option>
+														<option value="11">2012</option>
+														<option value="12">2011</option>
+														<option value="13">2010</option>
+													</select>
+												</fieldset>
+
+												<fieldset class="input-field-two">
+													<legend>
+														<label for="cvv">CVV</label>
+													</legend>
+													<input
+														id="cvv"
+														type="text"
+														name="cvv"
+														placeholder="Enter CVV"
+													/>
+												</fieldset>
+											</div>
+										</form>
+									</div>
 								</div>
 							</div>
 						</div>
-						<div class="swiper-slide">
-							<div class="membership-card membership-card--silver">
-								<div class="membership-card__info">
-									<img src="assets/images/title/silver.png" alt="" />
-									<h2>Silver</h2>
+						<div class="col-lg-4 mb-4">
+							<div class="summary-card">
+								<h2 class="heading">order summary</h2>
+
+								<div class="summary-card__content">
+									<div class="package-select">
+										<!-- icon -->
+										<div class="package-select__icon">
+											<img
+												src="assets/images/title/obsidian.png"
+												alt=""
+											/>
+										</div>
+										<div class="package-select__info">
+											<select id="summary">
+												<option value="1">Copper</option>
+												<option value="2">Silver</option>
+												<option value="3">Gold</option>
+												<option value="4" selected>
+													Obsidian
+												</option>
+											</select>
+											<p>Membership Tier</p>
+										</div>
+									</div>
+									<ul>
+										<li>
+											<p>Membership Fees</p>
+											<p>£250.00</p>
+										</li>
+										<li>
+											<p>Service Cost</p>
+											<p>£30.00</p>
+										</li>
+										<li>
+											<div class="coupon-info">
+												<p>Coupon Code</p>
+												<div class="tag">
+													<div class="tag-code">
+														<span>
+															<img
+																src="assets/images/icons/tag.svg"
+																alt=""
+															/>
+														</span>
+														TOC25OFF
+													</div>
+													<button class="tag-action">
+														Remove
+													</button>
+												</div>
+											</div>
+											<p>- £25.00</p>
+										</li>
+
+										<li>
+											<p>Total to be paid</p>
+											<p>£255.00</p>
+										</li>
+									</ul>
+
+									<button class="button">pay now</button>
 								</div>
-
-								<ul class="membership-card__pack-info">
-									<li>
-										<img src="assets/images/icons/check.svg" alt="" />
-										<p>Latest updates</p>
-									</li>
-									<li>
-										<img src="assets/images/icons/check.svg" alt="" />
-										<p>Limited notifications</p>
-									</li>
-									<li>
-										<img src="assets/images/icons/check.svg" alt="" />
-										<p>24 hour waiting time in pre- verification</p>
-									</li>
-									<li>
-										<img src="assets/images/icons/check.svg" alt="" />
-										<p>Updates available</p>
-									</li>
-									<li>
-										<img src="assets/images/icons/check.svg" alt="" />
-										<p>Lorem ipsum dolar sit amet</p>
-									</li>
-									<li>
-										<img src="assets/images/icons/check.svg" alt="" />
-										<p>Lorem ipsum dolar sit amet</p>
-									</li>
-								</ul>
-
-								<div class="membership-card__action">
-									<a href="#" class="button">Continue</a>
-								</div>
-							</div>
-						</div>
-						<div class="swiper-slide">
-							<div class="membership-card membership-card--gold">
-								<div class="membership-card__info">
-									<img src="assets/images/title/gold.png" alt="" />
-									<h2>Gold</h2>
-								</div>
-
-								<ul class="membership-card__pack-info">
-									<li>
-										<img src="assets/images/icons/check.svg" alt="" />
-										<p>Latest updates</p>
-									</li>
-									<li>
-										<img src="assets/images/icons/check.svg" alt="" />
-										<p>Limited notifications</p>
-									</li>
-									<li>
-										<img src="assets/images/icons/check.svg" alt="" />
-										<p>24 hour waiting time in pre- verification</p>
-									</li>
-									<li>
-										<img src="assets/images/icons/check.svg" alt="" />
-										<p>Updates available</p>
-									</li>
-									<li>
-										<img src="assets/images/icons/check.svg" alt="" />
-										<p>Lorem ipsum dolar sit amet</p>
-									</li>
-									<li>
-										<img src="assets/images/icons/check.svg" alt="" />
-										<p>Lorem ipsum dolar sit amet</p>
-									</li>
-									<li>
-										<img src="assets/images/icons/check.svg" alt="" />
-										<p>Lorem ipsum dolar sit amet</p>
-									</li>
-									<li>
-										<img src="assets/images/icons/check.svg" alt="" />
-										<p>Lorem ipsum dolar sit amet</p>
-									</li>
-								</ul>
-
-								<div class="membership-card__action">
-									<a href="#" class="button">Continue</a>
-								</div>
-							</div>
-						</div>
-						<div class="swiper-slide">
-							<div class="membership-card membership-card--obsidian">
-								<div class="membership-card__info">
-									<img src="assets/images/title/obsidian.png" alt="" />
-									<h2>Obsidian</h2>
-								</div>
-
-								<ul class="membership-card__pack-info">
-									<li>
-										<img src="assets/images/icons/check.svg" alt="" />
-										<p>Latest updates</p>
-									</li>
-									<li>
-										<img src="assets/images/icons/check.svg" alt="" />
-										<p>Limited notifications</p>
-									</li>
-									<li>
-										<img src="assets/images/icons/check.svg" alt="" />
-										<p>24 hour waiting time in pre- verification</p>
-									</li>
-									<li>
-										<img src="assets/images/icons/check.svg" alt="" />
-										<p>Updates available</p>
-									</li>
-									<li>
-										<img src="assets/images/icons/check.svg" alt="" />
-										<p>Lorem ipsum dolar sit amet</p>
-									</li>
-									<li>
-										<img src="assets/images/icons/check.svg" alt="" />
-										<p>Lorem ipsum dolar sit amet</p>
-									</li>
-									<li>
-										<img src="assets/images/icons/check.svg" alt="" />
-										<p>Lorem ipsum dolar sit amet</p>
-									</li>
-									<li>
-										<img src="assets/images/icons/check.svg" alt="" />
-										<p>Lorem ipsum dolar sit amet</p>
-									</li>
-									<li>
-										<img src="assets/images/icons/check.svg" alt="" />
-										<p>Lorem ipsum dolar sit amet</p>
-									</li>
-									<li>
-										<img src="assets/images/icons/check.svg" alt="" />
-										<p>Lorem ipsum dolar sit amet</p>
-									</li>
-									<li>
-										<img src="assets/images/icons/check.svg" alt="" />
-										<p>Lorem ipsum dolar sit amet</p>
-									</li>
-								</ul>
-
-								<div class="membership-card__action">
-									<a href="#" class="button">Continue</a>
-								</div>
-
-								<span class="label"> Recommended </span>
 							</div>
 						</div>
 					</div>
@@ -229,6 +354,7 @@
 		<script src="assets/js/jquery-3.6.0.min.js"></script>
 		<script src="assets/js/bootstrap.bundle.min.js"></script>
 		<script src="assets/js/swiper-bundle.min.js"></script>
+		<script src="assets/js/bvselect.js"></script>
 		<script src="assets/js/app.js"></script>
 	</body>
 </html>
