@@ -153,7 +153,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-3 mb-4">
-						<ul class="nav nav-tabs" id="myTab" role="tablist">
+						<ul class="nav nav-tabs settings-nav" id="myTab" role="tablist">
 							<li class="nav-item" role="presentation">
 								<button
 									class="nav-link active"
@@ -330,12 +330,12 @@
 							<li class="nav-item" role="presentation">
 								<button
 									class="nav-link"
-									id="members-tab"
+									id="settings-tab"
 									data-bs-toggle="tab"
-									data-bs-target="#members-tab-pane"
+									data-bs-target="#settings-tab-pane"
 									type="button"
 									role="tab"
-									aria-controls="members-tab-pane"
+									aria-controls="settings-tab-pane"
 									aria-selected="true"
 								>
 									<!-- icon -->
@@ -371,7 +371,7 @@
 						</ul>
 					</div>
 					<div class="col-lg-9 mb-4">
-						<div class="tab-content" id="myTabContent">
+						<div class="tab-content settings-tab-content" id="myTabContent">
 							<!-- My Profile -->
 							<div
 								class="tab-pane fade show active"
@@ -438,34 +438,467 @@
 									</div>
 								</div>
 							</div>
+							<!-- Booking Events -->
 							<div
-								class="tab-pane fade show active"
+								class="tab-pane fade "
 								id="booking-tab-pane"
 								role="tabpanel"
 								aria-labelledby="booking-tab"
 								tabindex="0"
-							></div>
+							>
+								<div class="settings-event">
+									<h2 class="heading">Bookings</h2>
+									<div class="settings-event__content">
+										<ul
+											class="nav nav-tabs"
+											id="myTab"
+											role="tablist"
+										>
+											<li class="nav-item" role="presentation">
+												<button
+													class="nav-link active"
+													id="upcoming-tab"
+													data-bs-toggle="tab"
+													data-bs-target="#upcoming"
+													type="button"
+													role="tab"
+													aria-controls="upcoming"
+													aria-selected="true"
+												>
+													upcoming
+												</button>
+											</li>
+											<li class="nav-item" role="presentation">
+												<button
+													class="nav-link"
+													id="past-tab"
+													data-bs-toggle="tab"
+													data-bs-target="#past"
+													type="button"
+													role="tab"
+													aria-controls="past"
+													aria-selected="false"
+												>
+													past
+												</button>
+											</li>
+										</ul>
+										<div class="tab-content" id="bookingsTab">
+											<div
+												class="tab-pane fade show active"
+												id="upcoming"
+												role="tabpanel"
+												aria-labelledby="upcoming-tab"
+											>
+												<ul class="events">
+													<li>
+														<div class="event-card">
+															<a
+																href=""
+																class="event-card__img"
+															>
+																<img
+																	src="assets/images/events/1.png"
+																	alt="event"
+																/>
+															</a>
+															<div class="event-card__info">
+																<a href="#">Heaven-O</a>
+																<div>
+																	<span
+																		>Tuesday | 2 April
+																		2022 | 10:00PM to
+																		02:00AM
+																	</span>
+																	<p>4 seats</p>
+																</div>
+																<span
+																	class="status status--confirm"
+																	>Confirmed</span
+																>
+															</div>
+														</div>
+													</li>
+													<li>
+														<div class="event-card">
+															<a
+																href=""
+																class="event-card__img"
+															>
+																<img
+																	src="assets/images/events/1.png"
+																	alt="event"
+																/>
+															</a>
+															<div class="event-card__info">
+																<a href="#">Heaven-O</a>
+																<div>
+																	<span
+																		>Tuesday | 2 April
+																		2022 | 10:00PM to
+																		02:00AM
+																	</span>
+																	<p>4 seats</p>
+																</div>
+																<span
+																	class="status status--pending"
+																	>Payment Pending
+																</span>
+															</div>
+														</div>
+													</li>
+													<li>
+														<div class="event-card">
+															<a
+																href=""
+																class="event-card__img"
+															>
+																<img
+																	src="assets/images/events/1.png"
+																	alt="event"
+																/>
+															</a>
+															<div class="event-card__info">
+																<a href="#">Heaven-O</a>
+																<div>
+																	<span
+																		>Tuesday | 2 April
+																		2022 | 10:00PM to
+																		02:00AM
+																	</span>
+																	<p>4 seats</p>
+																</div>
+																<span
+																	class="status status--confirm"
+																	>Confirmed</span
+																>
+															</div>
+														</div>
+													</li>
+												</ul>
+											</div>
+											<div
+												class="tab-pane fade"
+												id="past"
+												role="tabpanel"
+												aria-labelledby="past-tab"
+											>
+												...
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- Saved Events -->
 							<div
-								class="tab-pane fade show active"
+								class="tab-pane fade "
 								id="events-tab-pane"
 								role="tabpanel"
 								aria-labelledby="events-tab"
 								tabindex="0"
-							></div>
+							>
+								<div class="settings-event saved">
+									<h2 class="heading">Saved Events</h2>
+									<div class="settings-event__content">
+										<ul class="events">
+											<li>
+												<div class="event-card">
+													<a
+														href=""
+														class="event-card__img"
+													>
+														<img
+															src="assets/images/events/1.png"
+															alt="event"
+														/>
+													</a>
+													<div class="event-card__info">
+														<a href="#">Heaven-O</a>
+														<div>
+															<span
+																>Tuesday | 2 April
+																2022 
+															</span>
+														
+														</div>
+														<a href="#" class="more">
+															View More
+														</a>
+													</div>
+												</div>
+											</li>
+											<li>
+												<div class="event-card">
+													<a
+														href=""
+														class="event-card__img"
+													>
+														<img
+															src="assets/images/events/1.png"
+															alt="event"
+														/>
+													</a>
+													<div class="event-card__info">
+														<a href="#">Heaven-O</a>
+														<div>
+															<span
+																>Tuesday | 2 April
+																2022 
+															</span>
+														
+														</div>
+														<a href="#" class="more">
+															View More
+														</a>
+													</div>
+												</div>
+											</li>
+											<li>
+												<div class="event-card">
+													<a
+														href=""
+														class="event-card__img"
+													>
+														<img
+															src="assets/images/events/1.png"
+															alt="event"
+														/>
+													</a>
+													<div class="event-card__info">
+														<a href="#">Heaven-O</a>
+														<div>
+															<span
+																>Tuesday | 2 April
+																2022 
+															</span>
+														
+														</div>
+														<a href="#" class="more">
+															View More
+														</a>
+													</div>
+												</div>
+											</li>
+
+										</ul>
+										</div>
+									</div>
+							</div>
+							<!-- membership -->
 							<div
-								class="tab-pane fade show active"
+								class="tab-pane fade "
 								id="members-tab-pane"
 								role="tabpanel"
 								aria-labelledby="members-tab"
 								tabindex="0"
-							></div>
+							>
+								<div class="settings-membership">
+									<h2 class="heading">Membership</h2>
+									<div class="membership-content">
+											<div class="badge">
+												<div class="badge-title">
+													<div class="icon">
+														<img src="assets/images/title/silver.png" alt="">
+													</div>
+													<h2>Silver</h2>
+													<p>Membership Tier</p>
+												</div>
+		
+												<button>upgrade</button>
+											</div>
+											<div class="info">
+												<div class="promo">
+													<div class="icon">
+														<img src="assets/images/icons/premium.svg" alt="">
+													</div>
+													<div class="promo-info">
+														<h2>Wow, you’ve saved worth £230 till the date.</h2>
+														<p>
+															You could’ve saved <b>£684</b> by upgrading to Obsidian tier!
+														</p>
+													</div>
+												</div>
+
+												<ul class="info-content">
+													<li>
+														<span>Current Tier</span>
+														<p>
+															Silver
+														</p>
+													</li>
+													<li>
+														<span>Member Since</span>
+														<p>
+															10 Jan, 2022
+														</p>
+													</li>
+													<li>
+														<span>Active Days</span>
+														<p>
+															152 Days
+														</p>
+													</li>
+													<li>
+														<span>Participation</span>
+														<p>
+															120 Events
+														</p>
+													</li>
+													<li>
+														<span>Name on Invoice</span>
+														<p>
+															Mike Thompson
+														</p>
+													</li>
+												</ul>
+
+											</div>
+											
+									</div>
+								</div>
+						</div>
+						<!-- settings -->
 							<div
-								class="tab-pane fade show active"
+								class="tab-pane fade "
 								id="settings-tab-pane"
 								role="tabpanel"
 								aria-labelledby="settings-tab"
 								tabindex="0"
-							></div>
+							>
+							<div class="settings-account">
+							    <div class="account-information">
+										<h2 class="heading">Settings</h2>
+										<div class="account-information__content box">
+											<h2 class="title">Account Information</h2>
+
+											<form action="#">
+
+												<div class="settings-account__fields">
+													<fieldset class="input-field-two">
+														<legend>
+															<label for="fname">First Name</label>
+														</legend>
+														<input
+															id="fname"
+															type="text"
+															name="fname"
+															placeholder=""
+														/>
+													</fieldset>
+													<fieldset class="input-field-two">
+														<legend>
+															<label for="lname">Last Name</label>
+														</legend>
+														<input
+															id="lname"
+															type="text"
+															name="lname"
+															placeholder=""
+														/>
+													</fieldset>
+													<fieldset class="input-field-two">
+														<legend>
+															<label for="email">Email Address</label>
+														</legend>
+														<input
+															id="email"
+															type="text"
+															name="email"
+															placeholder=""
+														/>
+													</fieldset>
+													<fieldset class="input-field-two">
+														<legend>
+															<label for="dob">Date of Birth</label>
+														</legend>
+														<input
+															id="dob"
+															type="date"
+															name="dob"
+															placeholder=""
+														/>
+													</fieldset>
+												</div>
+
+												<button>Save Profile</button>
+
+											</form>
+
+										</div>										
+										<div class="account-password__content box">
+											<h2 class="title">Update Password</h2>
+
+											<form action="#">
+
+												<div class="settings-account__fields">
+													<fieldset class="input-field-two">
+														<legend>
+															<label for="opassword">old Password</label>
+														</legend>
+														<input
+															id="opassword"
+															type="password"
+															name="opassword"
+														/>
+													</fieldset>
+													<fieldset class="input-field-two">
+														<legend>
+															<label for="npassword">New Password</label>
+														</legend>
+														<input
+															id="npassword"
+															type="password"
+															name="npassword"
+															placeholder=""
+														/>
+													</fieldset>
+													<fieldset class="input-field-two">
+														<legend>
+															<label for="cpassword">Confirm New Password</label>
+														</legend>
+														<input
+															id="cpassword"
+															type="password"
+															name="cpassword"
+															placeholder=""
+														/>
+													</fieldset>
+												</div>
+
+												<button>Save Password</button>
+
+											</form>
+
+										</div>										
+										<div class="account-preference__content box">
+											<h2 class="title">Notification Preferences</h2>
+
+											<form action="#">
+
+												<div class="radio-buttons">
+													<div class="form-check form-switch">
+														<input class="form-check-input" type="checkbox" id="emailCheck">
+														<label class="form-check-label" for="emailCheck">Email notifications</label>
+													</div>
+													<div class="form-check form-switch">
+														<input class="form-check-input" type="checkbox" id="smsCheck">
+														<label class="form-check-label" for="smsCheck">SMS notifications</label>
+													</div>
+													<div class="form-check form-switch">
+														<input class="form-check-input" type="checkbox" id="promotionalCheck">
+														<label class="form-check-label" for="promotionalCheck">Promotional offers via email & SMS</label>
+													</div>
+												</div>
+
+												<button>Save Preferences</button>
+
+											</form>
+
+										</div>										
+									</div>
+							</div>
+						</div>
+							</div>
 						</div>
 					</div>
 				</div>

@@ -45,11 +45,12 @@
 		}
 
 		label {
-			color: #fff;
 			font-size: 13px;
 			font-weight: 400;
 			padding: 0px 4px;
 			line-height: 15.73px;
+			text-transform: capitalize;
+			color: rgba(255, 255, 255, 0.5);
 		}
 
 		input {
