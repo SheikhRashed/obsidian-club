@@ -6,7 +6,7 @@
   line-height: 16.94px;
 }
 
-.settings-event .nav-link, .settings-membership .membership-content .badge-title h2, .settings-account .box .title, .settings-account .account-preference__content .form-switch label {
+.settings-event .nav-link, .settings-membership .membership-content .badge-title h2, .settings-account .box .title, .settings-account .account-preference__content .form-switch label, .auth-heading > div p {
   font-size: 16px;
   font-weight: 600;
   line-height: 19.36px;
@@ -72,6 +72,13 @@ input:focus,
 button:focus {
   outline: none;
   box-shadow: none;
+}
+
+/* Hide Calendar Icon In Chrome */
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+  display: none;
+  -webkit-appearance: none;
 }
 
 a {
@@ -302,6 +309,25 @@ body {
 
 .input-field-two .bv_ul_inner li:hover {
   color: #1b1b1b;
+}
+
+.input-field-two.date input {
+  color: transparent;
+  font-size: 16px;
+  line-height: 19.36px;
+  padding-left: 32px;
+}
+
+.input-field-two.date input:focus {
+  color: #fff;
+  font-size: 12px;
+}
+
+.input-field-two.date span {
+  top: calc(50% - 4px);
+  left: 16px;
+  position: absolute;
+  transform: translateY(-50%);
 }
 
 .event-card {
@@ -2891,6 +2917,273 @@ section .section-heading {
   .settings-account .account-password__content fieldset:nth-child(1) {
     grid-column: 1/3;
   }
+}
+
+.auth {
+  height: 100vh;
+  overflow: hidden;
+  padding-top: 80px;
+  position: relative;
+  overflow-y: scroll;
+  background-color: #000000;
+}
+
+@media (max-width: 1200px) {
+  .auth {
+    padding-top: 0px;
+    padding-bottom: 60px;
+  }
+}
+
+.auth-img {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+@media (max-width: 1200px) {
+  .auth-img {
+    height: 280px;
+    margin-bottom: 24px;
+  }
+}
+
+.auth-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.auth-heading {
+  display: flex;
+  margin-bottom: 70px;
+  justify-content: space-between;
+}
+
+@media (max-width: 767px) {
+  .auth-heading {
+    margin-bottom: 32px;
+  }
+}
+
+.auth-heading > div h2 {
+  color: #fff;
+  font-size: 36px;
+  line-height: 54px;
+  position: relative;
+  margin-bottom: 32px;
+  padding-bottom: 22px;
+  text-transform: uppercase;
+  font-family: "metro-regular";
+}
+
+@media (max-width: 767px) {
+  .auth-heading > div h2 {
+    font-size: 28px;
+    line-height: 40px;
+    padding-bottom: 12px;
+    margin-bottom: 24px;
+  }
+}
+
+.auth-heading > div h2::after {
+  content: "";
+  top: 100%;
+  left: 0;
+  width: 120px;
+  height: 2px;
+  position: absolute;
+  background: linear-gradient(90deg, #ff9f2f 0%, rgba(196, 196, 196, 0) 100%);
+}
+
+.auth-heading > div p {
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.auth-heading > div p a {
+  font-weight: 600;
+  margin-left: 4px;
+  display: inline-block;
+  text-transform: capitalize;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.auth-heading .auth-back {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  overflow: hidden;
+  border-radius: 50%;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 767px) {
+  .auth-heading .auth-back {
+    width: 32px;
+    height: 32px;
+  }
+  .auth-heading .auth-back img {
+    transform: scale(0.6);
+  }
+}
+
+.auth-contents {
+  gap: 24px;
+  display: grid;
+  margin-bottom: 36px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media (max-width: 767px) {
+  .auth-contents {
+    grid-template-columns: 1fr;
+  }
+}
+
+.auth-contents.login {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 1200px) {
+  .auth-info {
+    margin-left: 24px;
+  }
+}
+
+.auth-info .input-field-two {
+  background-color: #000;
+}
+
+.auth-info .form-check {
+  display: flex;
+  margin-bottom: 60px;
+  align-items: center;
+}
+
+@media (max-width: 767px) {
+  .auth-info .form-check {
+    margin-bottom: 24px;
+  }
+}
+
+.auth-info .form-check-label {
+  color: #fff;
+  font-size: 14px;
+  margin-top: 3px;
+  margin-left: 6px;
+  display: inline-block;
+  line-height: 16.94px;
+}
+
+@media (max-width: 767px) {
+  .auth-info .form-check-label {
+    font-size: 12px;
+    line-height: 21px;
+  }
+}
+
+.auth-info .form-check-label a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.auth-info .form-check-input {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  border-radius: 4px;
+}
+
+@media (max-width: 767px) {
+  .auth-info .form-check-input {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.auth-info .form-check-input:focus {
+  outline: none;
+  border: none;
+  box-shadow: none;
+}
+
+.auth-info .form-check-input:checked {
+  background: url("data:image/svg+xml,%3Csvg width='14' height='11' viewBox='0 0 14 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 2.0625L5.125 8.9375L2 5.8125' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E ") center center/contain no-repeat;
+  background-color: #fff;
+}
+
+.auth-info .message {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19.36px;
+  margin-top: -9px;
+  color: rgba(175, 175, 175, 0.8);
+}
+
+.auth-info button {
+  width: 230px;
+  height: 50px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #0b0e16;
+  border-radius: 6px;
+  line-height: 16.94px;
+  background-color: #fff;
+  text-transform: capitalize;
+}
+
+@media (max-width: 767px) {
+  .auth-info button {
+    width: 100%;
+  }
+}
+
+.auth-action {
+  display: flex;
+  margin-bottom: 60px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (max-width: 575px) {
+  .auth-action {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 767px) {
+  .auth-action {
+    margin-bottom: 24px;
+  }
+}
+
+.auth-action .form-check {
+  margin: 0;
+}
+
+@media (max-width: 767px) {
+  .auth-action .form-check {
+    margin-bottom: 12px;
+  }
+}
+
+.auth-action a {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16.94px;
+  text-transform: capitalize;
+}
+
+.auth-action a:hover {
+  text-decoration: underline;
 }
 
 .footer {
