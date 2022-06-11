@@ -13,6 +13,30 @@ if (toggleBtn) {
 	})
 }
 
+// event details show
+
+const eventsWrapper = document.querySelector(".settings-event")
+const detailsWrapper = document.querySelector(".settings-event--details")
+const backEvent = document.querySelector(".settings-event--details .heading a")
+
+if (document.querySelector(".event-card-title")) {
+	const detailsShow = document
+		.querySelectorAll(".event-card-title")
+		.forEach((event) => {
+			event.addEventListener("click", function () {
+				eventsWrapper.classList.toggle("d-none")
+				detailsWrapper.classList.toggle("d-none")
+			})
+		})
+}
+
+if (backEvent) {
+	backEvent.addEventListener("click", function () {
+		eventsWrapper.classList.toggle("d-none")
+		detailsWrapper.classList.toggle("d-none")
+	})
+}
+
 // Sticky navbar on scroll
 // When the user scrolls the page, execute myFunction
 
