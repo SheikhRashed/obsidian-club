@@ -62,6 +62,36 @@ if (navbar) {
 	}
 }
 
+// inc-dec counter
+// Select increment and decrement buttons
+const incrementCount = document.getElementById("plus")
+const decrementCount = document.getElementById("minus")
+
+// Select total count
+const totalCount = document.getElementById("total-count")
+
+// Variable to track count
+var count = 0
+
+// Display initial count value
+totalCount.innerHTML = count
+
+// Function to increment count
+const handleIncrement = () => {
+	count++
+	totalCount.innerHTML = count
+}
+
+// Function to decrement count
+const handleDecrement = () => {
+	count--
+	totalCount.innerHTML = count
+}
+
+// Add click event to buttons
+incrementCount.addEventListener("click", handleIncrement)
+decrementCount.addEventListener("click", handleDecrement)
+
 // Sliders
 if (document.querySelector(".bannerSlide")) {
 	var swiper = new Swiper(".bannerSlide", {
@@ -176,6 +206,36 @@ if (document.querySelector(".packageSlider")) {
 				slidesPerView: 4,
 			},
 		},
+	})
+}
+
+if (document.querySelector(".event-slider")) {
+	var swiper = new Swiper(".event-slider", {
+		slidesPerView: 1,
+		spaceBetween: 0,
+		loop: true,
+		pagination: {
+			el: ".swiper-pagination",
+			// dynamicBullets: true,
+		},
+		navigation: {
+			nextEl: ".swiper-button-next",
+			prevEl: ".swiper-button-prev",
+		},
+
+		// breakpoints: {
+		// 	575: {
+		// 		slidesPerView: 2,
+		// 	},
+
+		// 	992: {
+		// 		slidesPerView: 3,
+		// 	},
+
+		// 	1200: {
+		// 		slidesPerView: 4,
+		// 	},
+		// },
 	})
 }
 
