@@ -55,6 +55,7 @@
 				text-transform: uppercase;
 
 				&::after {
+					color: #fff;
 					content: "";
 					left: 50%;
 					width: 30px;
@@ -66,8 +67,11 @@
 					transform: translateX(-50%) scale(0);
 				}
 
-				&:hover::after {
-					transform: translateX(-50%) scale(1);
+				&:hover {
+					&::after {
+						background-color: #fff;
+						transform: translateX(-50%) scale(1);
+					}
 				}
 			}
 		}
@@ -245,11 +249,39 @@
 					a {
 						color: rgba(255, 255, 255, 0.6);
 						font-size: 14px;
+
 						&:hover {
 							color: #fff;
 						}
-						&:hover::after,
-						.active-link {
+
+						&::after {
+							color: #fff;
+							content: "";
+							left: 50%;
+							width: 30px;
+							height: 2px;
+							position: absolute;
+							top: calc(100% + 5px);
+							background-color: transparent;
+							transition: all 0.3s linear;
+							transform: translateX(-50%) scale(0);
+						}
+
+						&.active-link {
+							color: #fff;
+							&::after {
+								transform: translateX(-50%) scale(1);
+								background: linear-gradient(
+									90deg,
+									rgba(196, 196, 196, 0) 0%,
+									#ff9f2f 52.08%,
+									rgba(196, 196, 196, 0) 100%
+								);
+							}
+						}
+
+						&:hover::after {
+							transform: translateX(-50%) scale(1);
 							background: linear-gradient(
 								90deg,
 								rgba(196, 196, 196, 0) 0%,

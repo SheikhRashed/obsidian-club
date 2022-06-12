@@ -373,6 +373,7 @@ body {
   top: 50%;
   left: 50%;
   color: #fff;
+  white-space: nowrap;
   position: absolute;
   transform: translate(-50%, -50%);
 }
@@ -1117,6 +1118,7 @@ section .section-heading {
 }
 
 .header-menu li a::after {
+  color: #fff;
   content: "";
   left: 50%;
   width: 30px;
@@ -1129,6 +1131,7 @@ section .section-heading {
 }
 
 .header-menu li a:hover::after {
+  background-color: #fff;
   transform: translateX(-50%) scale(1);
 }
 
@@ -1324,8 +1327,30 @@ section .section-heading {
   color: #fff;
 }
 
-.header--login .header-menu li a:hover::after,
-.header--login .header-menu li a .active-link {
+.header--login .header-menu li a::after {
+  color: #fff;
+  content: "";
+  left: 50%;
+  width: 30px;
+  height: 2px;
+  position: absolute;
+  top: calc(100% + 5px);
+  background-color: transparent;
+  transition: all 0.3s linear;
+  transform: translateX(-50%) scale(0);
+}
+
+.header--login .header-menu li a.active-link {
+  color: #fff;
+}
+
+.header--login .header-menu li a.active-link::after {
+  transform: translateX(-50%) scale(1);
+  background: linear-gradient(90deg, rgba(196, 196, 196, 0) 0%, #ff9f2f 52.08%, rgba(196, 196, 196, 0) 100%);
+}
+
+.header--login .header-menu li a:hover::after {
+  transform: translateX(-50%) scale(1);
   background: linear-gradient(90deg, rgba(196, 196, 196, 0) 0%, #ff9f2f 52.08%, rgba(196, 196, 196, 0) 100%);
 }
 
