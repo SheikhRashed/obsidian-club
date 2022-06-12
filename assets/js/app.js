@@ -58,9 +58,8 @@ if (backEvent) {
 // Sticky navbar on scroll
 // When the user scrolls the page, execute myFunction
 
+var navbar = document.querySelector(".header")
 if (navbar) {
-	var navbar = document.querySelector(".header")
-
 	window.onscroll = function () {
 		myFunction()
 	}

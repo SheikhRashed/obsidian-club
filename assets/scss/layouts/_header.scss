@@ -108,14 +108,14 @@
 		}
 
 		.logo-sm {
-			transform: translate(-50%, 50%);
 			@include min(992px) {
 				opacity: 0;
+				transform: translate(-50%, 50%);
 			}
 
 			@include max(991px) {
 				left: 0;
-				opacity: 0;
+				transform: translate(0, 50%);
 			}
 		}
 	}
@@ -221,10 +221,14 @@
 		.header {
 			&-logo {
 				.logo-lg {
-					transform: translate(-50%, -100%);
+					@include min(992px) {
+						transform: translate(-50%, -100%);
+					}
 				}
 				.logo-sm {
-					opacity: 1;
+					@include min(992px) {
+						opacity: 1;
+					}
 				}
 			}
 		}
