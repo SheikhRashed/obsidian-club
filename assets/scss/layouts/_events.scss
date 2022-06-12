@@ -92,6 +92,26 @@
 			margin-bottom: 20px;
 		}
 	}
+
+	&-load {
+		display: flex;
+		margin-top: 60px;
+		align-items: center;
+		flex-direction: column;
+
+		span {
+			margin-bottom: 12px;
+			display: inline-block;
+		}
+
+		a {
+			font-size: 14px;
+			font-weight: 600;
+			line-height: 16.94px;
+			text-transform: uppercase;
+			color: rgba(255, 255, 255, 0.5);
+		}
+	}
 }
 
 .upcoming {

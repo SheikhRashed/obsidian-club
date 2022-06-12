@@ -67,30 +67,32 @@ if (navbar) {
 const incrementCount = document.getElementById("plus")
 const decrementCount = document.getElementById("minus")
 
-// Select total count
-const totalCount = document.getElementById("total-count")
+if (document.querySelector(".counter")) {
+	// Select total count
+	const totalCount = document.getElementById("total-count")
 
-// Variable to track count
-var count = 0
+	// Variable to track count
+	var count = 0
 
-// Display initial count value
-totalCount.innerHTML = count
-
-// Function to increment count
-const handleIncrement = () => {
-	count++
+	// Display initial count value
 	totalCount.innerHTML = count
-}
 
-// Function to decrement count
-const handleDecrement = () => {
-	count--
-	totalCount.innerHTML = count
-}
+	// Function to increment count
+	const handleIncrement = () => {
+		count++
+		totalCount.innerHTML = count
+	}
 
-// Add click event to buttons
-incrementCount.addEventListener("click", handleIncrement)
-decrementCount.addEventListener("click", handleDecrement)
+	// Function to decrement count
+	const handleDecrement = () => {
+		count--
+		totalCount.innerHTML = count
+	}
+
+	// Add click event to buttons
+	incrementCount.addEventListener("click", handleIncrement)
+	decrementCount.addEventListener("click", handleDecrement)
+}
 
 // Sliders
 if (document.querySelector(".bannerSlide")) {
@@ -296,4 +298,12 @@ document.addEventListener("DOMContentLoaded", function () {
 			placeholder: "Select Year",
 		})
 	}
+})
+
+// Light Gallery
+lightGallery(document.getElementById("galleryBox"), {
+	animateThumb: false,
+	zoomFromOrigin: false,
+	allowMediaOverlap: true,
+	toggleThumb: true,
 })

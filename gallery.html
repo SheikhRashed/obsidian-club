@@ -21,6 +21,14 @@
 		<!-- Library  -->
 		<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
 		<link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.5.0-beta.5/css/lightgallery-bundle.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.5.0-beta.5/css/lg-thumbnail.min.css"
+		/>
 		<!-- Main css -->
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="assets/css/main.css.map" />
@@ -142,234 +150,85 @@
 			</div>
 			<div class="container">
 				<div class="banner-sm__content">
-					<h2>Event Calendar</h2>
-					<p>Home / Event Calendar</p>
+					<h2>Gallery</h2>
+					<p>Home / Gallery</p>
 				</div>
 			</div>
 		</div>
 
-		<!-- Events  -->
-		<section class="event">
+		<section class="gallery">
 			<div class="container">
-				<!-- heading  -->
-				<div class="row">
-					<div class="col-md-4 offset-lg-4">
-						<div class="event-year">
-							<span>
-								<img src="assets/images/icons/s-left.svg" alt="icon" />
-							</span>
-							<div class="event-year__value">april 2022</div>
-							<span>
-								<img src="assets/images/icons/s-right.svg" alt="icon" />
-							</span>
-						</div>
-					</div>
-					<div class="col-md-4 offset-md-4 offset-lg-0">
-						<ul class="nav nav-tabs" id="myTab" role="tablist">
-							<li class="nav-item" role="presentation">
-								<button
-									class="nav-link active"
-									id="calendar-tab"
-									data-bs-toggle="tab"
-									data-bs-target="#calendar-tab-pane"
-									type="button"
-									role="tab"
-									aria-controls="calendar-tab-pane"
-									aria-selected="true"
-								>
-									Grid
-								</button>
-							</li>
-							<li class="nav-item" role="presentation">
-								<button
-									class="nav-link"
-									id="list-tab"
-									data-bs-toggle="tab"
-									data-bs-target="#list-tab-pane"
-									type="button"
-									role="tab"
-									aria-controls="list-tab-pane"
-									aria-selected="false"
-								>
-									List
-								</button>
-							</li>
-						</ul>
-					</div>
+				<div id="galleryBox" class="gallery-wrapper">
+					<a
+						href="assets/images/event/1.png"
+						data-lg-size="1600-2400"
+						class="gallery-img lg"
+					>
+						<img src="assets/images/event/1.png" alt="img1" />
+					</a>
+					<a
+						href="assets/images/event/2.png"
+						data-lg-size="1600-2400"
+						class="gallery-img"
+					>
+						<img src="assets/images/event/2.png" alt="img2" />
+					</a>
+					<a
+						href="assets/images/event/3.png"
+						data-lg-size="1600-2400"
+						class="gallery-img"
+					>
+						<img src="assets/images/event/3.png" alt="img3" />
+					</a>
+					<a
+						href="assets/images/event/4.png"
+						data-lg-size="1600-2400"
+						class="gallery-img"
+					>
+						<img src="assets/images/event/4.png" alt="img4" />
+					</a>
+					<a
+						href="assets/images/event/5.png"
+						data-lg-size="1600-2400"
+						class="gallery-img"
+					>
+						<img src="assets/images/event/5.png" alt="img5" />
+					</a>
+					<a
+						href="assets/images/event/6.png"
+						data-lg-size="1600-2400"
+						class="gallery-img"
+					>
+						<img src="assets/images/event/6.png" alt="img6" />
+					</a>
+					<a
+						href="assets/images/event/7.png"
+						data-lg-size="1600-2400"
+						class="gallery-img"
+					>
+						<img src="assets/images/event/7.png" alt="img7" />
+					</a>
+					<a
+						href="assets/images/event/8.png"
+						data-lg-size="1600-2400"
+						class="gallery-img"
+					>
+						<img src="assets/images/event/8.png" alt="img8" />
+					</a>
+					<a
+						href="assets/images/event/9.png"
+						data-lg-size="1600-2400"
+						class="gallery-img"
+					>
+						<img src="assets/images/event/9.png" alt="img9" />
+					</a>
 				</div>
 
-				<!-- event content  -->
-				<div class="tab-content" id="myTabContent">
-					<div
-						class="tab-pane fade show active"
-						id="calendar-tab-pane"
-						role="tabpanel"
-						aria-labelledby="calendar-tab"
-						tabindex="0"
-					>
-						...
-					</div>
-					<div
-						class="tab-pane fade"
-						id="list-tab-pane"
-						role="tabpanel"
-						aria-labelledby="list-tab"
-						tabindex="0"
-					>
-						<ul class="event-list">
-							<li>
-								<div class="event-box">
-									<!-- img -->
-									<div class="img">
-										<img src="assets/images/events/1.png" alt="" />
-									</div>
-									<div class="info">
-										<div class="info-label">
-											<div class="event-box__date">
-												<p>
-													1
-													<span>Apr</span>
-												</p>
-											</div>
-											<p>Tuesday | 1 April 2022</p>
-										</div>
-										<div class="info-details">
-											<h2>Heaven-O</h2>
-											<blockquote>
-												<p>
-													Welcome to the best private event
-													portal in London. Invitations to
-													once-in-a-lifetime openings, launches,
-													film premieres, after parties, and
-													special member-only events.
-												</p>
-											</blockquote>
-
-											<button class="button">View More</button>
-										</div>
-									</div>
-								</div>
-							</li>
-							<li>
-								<div class="event-box">
-									<!-- img -->
-									<div class="img">
-										<img src="assets/images/events/1.png" alt="" />
-									</div>
-									<div class="info">
-										<div class="info-label">
-											<div class="event-box__date">
-												<p>
-													1
-													<span>Apr</span>
-												</p>
-											</div>
-											<p>Tuesday | 1 April 2022</p>
-										</div>
-										<div class="info-details">
-											<h2>Heaven-O</h2>
-											<blockquote>
-												<p>
-													Welcome to the best private event
-													portal in London. Invitations to
-													once-in-a-lifetime openings, launches,
-													film premieres, after parties, and
-													special member-only events.
-												</p>
-											</blockquote>
-											<div class="info-details-action">
-												<button>
-													<span>
-														<img
-															src="assets/images/icons/b-title.svg"
-															alt="icon"
-														/>
-													</span>
-
-													Upgrade Membership
-												</button>
-
-												<a href="#">Premium Perks</a>
-											</div>
-										</div>
-									</div>
-								</div>
-							</li>
-							<li>
-								<div class="event-box">
-									<!-- img -->
-									<div class="img">
-										<img src="assets/images/events/1.png" alt="" />
-									</div>
-									<div class="info">
-										<div class="info-label">
-											<div class="event-box__date">
-												<p>
-													1
-													<span>Apr</span>
-												</p>
-											</div>
-											<p>Tuesday | 1 April 2022</p>
-										</div>
-										<div class="info-details">
-											<h2>Heaven-O</h2>
-											<blockquote>
-												<p>
-													Welcome to the best private event
-													portal in London. Invitations to
-													once-in-a-lifetime openings, launches,
-													film premieres, after parties, and
-													special member-only events.
-												</p>
-											</blockquote>
-
-											<button class="button">View More</button>
-										</div>
-									</div>
-								</div>
-							</li>
-							<li>
-								<div class="event-box">
-									<!-- img -->
-									<div class="img">
-										<img src="assets/images/events/1.png" alt="" />
-									</div>
-									<div class="info">
-										<div class="info-label">
-											<div class="event-box__date">
-												<p>
-													1
-													<span>Apr</span>
-												</p>
-											</div>
-											<p>Tuesday | 1 April 2022</p>
-										</div>
-										<div class="info-details">
-											<h2>Heaven-O</h2>
-											<blockquote>
-												<p>
-													Welcome to the best private event
-													portal in London. Invitations to
-													once-in-a-lifetime openings, launches,
-													film premieres, after parties, and
-													special member-only events.
-												</p>
-											</blockquote>
-
-											<button class="button">View More</button>
-										</div>
-									</div>
-								</div>
-							</li>
-						</ul>
-
-						<div class="event-load">
-							<span>
-								<img src="assets/images/icons/refresh.svg" alt="" />
-							</span>
-							<a href="#">Loading More Events</a>
-						</div>
-					</div>
+				<div class="gallery-load">
+					<span>
+						<img src="assets/images/icons/refresh.svg" alt="" />
+					</span>
+					<a href="#">Loading More Images</a>
 				</div>
 			</div>
 		</section>
@@ -509,6 +368,8 @@
 		<script src="assets/js/jquery-3.6.0.min.js"></script>
 		<script src="assets/js/bootstrap.bundle.min.js"></script>
 		<script src="assets/js/swiper-bundle.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.5.0-beta.5/lightgallery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.5.0-beta.5/plugins/thumbnail/lg-thumbnail.min.js"></script>
 		<script src="assets/js/app.js"></script>
 	</body>
 </html>
