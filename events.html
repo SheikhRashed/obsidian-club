@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>OBSIDIAN CLUB</title>
+		<!-- Favicon -->
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="assets/images/favicon_io/favicon-16x16.png"
+		/>
+		<link rel="stylesheet" href="assets/fonts/fonts.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- Library  -->
+		<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+		<!-- Main css -->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/main.css.map" />
+	</head>
+
+	<body>
+		<!-- header section start  -->
+		<header class="header header--login">
+			<div class="container">
+				<div class="header-content">
+					<!-- header menu  -->
+
+					<a href="#" class="logo logo-sm">
+						<img src="assets/images/logo/logo-sm.png" alt="logo" />
+					</a>
+
+					<div class="header-right">
+						<ul class="header-menu">
+							<li>
+								<a href="#" class="active-link">Home</a>
+							</li>
+							<li>
+								<a href="#">Event Calendar</a>
+							</li>
+							<li>
+								<a href="#">VIP Corner</a>
+							</li>
+							<li>
+								<a href="#">Gallery</a>
+							</li>
+							<li>
+								<a href="#">Contact Us</a>
+							</li>
+						</ul>
+
+						<div class="mobile-action">
+							<div class="profile">
+								<div class="profile-img">
+									<img src="assets/images/user.png " alt="" />
+								</div>
+
+								<div class="dropdown profile-info">
+									<a
+										class="btn btn-secondary dropdown-toggle"
+										href="#"
+										role="button"
+										id="dropdownMenuLink"
+										data-bs-toggle="dropdown"
+										aria-expanded="false"
+									>
+										Mike
+										<span>
+											<img
+												src="assets/images/icons/chevron.svg"
+												alt=""
+											/>
+										</span>
+									</a>
+
+									<ul
+										class="dropdown-menu"
+										aria-labelledby="dropdownMenuLink"
+									>
+										<li>
+											<a class="dropdown-item" href="#">Action</a>
+										</li>
+										<li>
+											<a class="dropdown-item" href="#"
+												>Another action</a
+											>
+										</li>
+										<li>
+											<a class="dropdown-item" href="#"
+												>Something else here</a
+											>
+										</li>
+									</ul>
+								</div>
+							</div>
+
+							<button class="toggle toggleBtn">
+								<span></span>
+								<span></span>
+								<span></span>
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="mobile-menu">
+					<ul>
+						<li>
+							<a href="#">Home</a>
+						</li>
+						<li>
+							<a href="#informationSection">Experience</a>
+						</li>
+						<li>
+							<a href="#premiumSection">Premium Access</a>
+						</li>
+						<li>
+							<a href="#faqSection">Faqs</a>
+						</li>
+						<li>
+							<a href="#aboutSection">About</a>
+						</li>
+						<li>
+							<a href="#contactSection">Contact us</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</header>
+		<!-- header section end  -->
+
+		<div class="banner-sm">
+			<div class="banner-sm__img">
+				<img src="assets/images/bg/bg-sm-2.png" alt="" />
+			</div>
+			<div class="container">
+				<div class="banner-sm__content">
+					<h2>Event Calendar</h2>
+					<p>Home / Event Calendar</p>
+				</div>
+			</div>
+		</div>
+
+		<!-- Events  -->
+		<section class="event">
+			<div class="container">
+				<!-- heading  -->
+				<div class="row">
+					<div class="col-md-4 offset-lg-4">
+						<div class="event-year">
+							<span>
+								<img src="assets/images/icons/s-left.svg" alt="icon" />
+							</span>
+							<div class="event-year__value">april 2022</div>
+							<span>
+								<img src="assets/images/icons/s-right.svg" alt="icon" />
+							</span>
+						</div>
+					</div>
+					<div class="col-md-4 offset-md-4 offset-lg-0">
+						<ul class="nav nav-tabs" id="myTab" role="tablist">
+							<li class="nav-item" role="presentation">
+								<button
+									class="nav-link active"
+									id="calendar-tab"
+									data-bs-toggle="tab"
+									data-bs-target="#calendar-tab-pane"
+									type="button"
+									role="tab"
+									aria-controls="calendar-tab-pane"
+									aria-selected="true"
+								>
+									Grid
+								</button>
+							</li>
+							<li class="nav-item" role="presentation">
+								<button
+									class="nav-link"
+									id="list-tab"
+									data-bs-toggle="tab"
+									data-bs-target="#list-tab-pane"
+									type="button"
+									role="tab"
+									aria-controls="list-tab-pane"
+									aria-selected="false"
+								>
+									List
+								</button>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<!-- event content  -->
+				<div class="tab-content" id="myTabContent">
+					<div
+						class="tab-pane fade show active"
+						id="calendar-tab-pane"
+						role="tabpanel"
+						aria-labelledby="calendar-tab"
+						tabindex="0"
+					>
+						...
+					</div>
+					<div
+						class="tab-pane fade"
+						id="list-tab-pane"
+						role="tabpanel"
+						aria-labelledby="list-tab"
+						tabindex="0"
+					>
+						<ul class="event-list">
+							<li>
+								<div class="event-box">
+									<!-- img -->
+									<div class="img">
+										<img src="assets/images/events/1.png" alt="" />
+									</div>
+									<div class="info">
+										<div class="info-label">
+											<div class="event-box__date">
+												<p>
+													1
+													<span>Apr</span>
+												</p>
+											</div>
+											<p>Tuesday | 1 April 2022</p>
+										</div>
+										<div class="info-details">
+											<h2>Heaven-O</h2>
+											<blockquote>
+												<p>
+													Welcome to the best private event
+													portal in London. Invitations to
+													once-in-a-lifetime openings, launches,
+													film premieres, after parties, and
+													special member-only events.
+												</p>
+											</blockquote>
+
+											<button class="button">View More</button>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="event-box">
+									<!-- img -->
+									<div class="img">
+										<img src="assets/images/events/1.png" alt="" />
+									</div>
+									<div class="info">
+										<div class="info-label">
+											<div class="event-box__date">
+												<p>
+													1
+													<span>Apr</span>
+												</p>
+											</div>
+											<p>Tuesday | 1 April 2022</p>
+										</div>
+										<div class="info-details">
+											<h2>Heaven-O</h2>
+											<blockquote>
+												<p>
+													Welcome to the best private event
+													portal in London. Invitations to
+													once-in-a-lifetime openings, launches,
+													film premieres, after parties, and
+													special member-only events.
+												</p>
+											</blockquote>
+											<div class="info-details-action">
+												<button>
+													<span>
+														<img
+															src="assets/images/icons/b-title.svg"
+															alt="icon"
+														/>
+													</span>
+
+													Upgrade Membership
+												</button>
+
+												<a href="#">Premium Perks</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="event-box">
+									<!-- img -->
+									<div class="img">
+										<img src="assets/images/events/1.png" alt="" />
+									</div>
+									<div class="info">
+										<div class="info-label">
+											<div class="event-box__date">
+												<p>
+													1
+													<span>Apr</span>
+												</p>
+											</div>
+											<p>Tuesday | 1 April 2022</p>
+										</div>
+										<div class="info-details">
+											<h2>Heaven-O</h2>
+											<blockquote>
+												<p>
+													Welcome to the best private event
+													portal in London. Invitations to
+													once-in-a-lifetime openings, launches,
+													film premieres, after parties, and
+													special member-only events.
+												</p>
+											</blockquote>
+
+											<button class="button">View More</button>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="event-box">
+									<!-- img -->
+									<div class="img">
+										<img src="assets/images/events/1.png" alt="" />
+									</div>
+									<div class="info">
+										<div class="info-label">
+											<div class="event-box__date">
+												<p>
+													1
+													<span>Apr</span>
+												</p>
+											</div>
+											<p>Tuesday | 1 April 2022</p>
+										</div>
+										<div class="info-details">
+											<h2>Heaven-O</h2>
+											<blockquote>
+												<p>
+													Welcome to the best private event
+													portal in London. Invitations to
+													once-in-a-lifetime openings, launches,
+													film premieres, after parties, and
+													special member-only events.
+												</p>
+											</blockquote>
+
+											<button class="button">View More</button>
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- footer section start  -->
+		<footer class="footer footer--two" id="contactSection">
+			<div class="container">
+				<!-- footer Heading -->
+				<div class="footer-top">
+					<!-- logo -->
+					<div class="footer-logo">
+						<img src="assets/images/logo/footer-logo.png" alt="logo" />
+					</div>
+				</div>
+				<!-- footer Content  -->
+				<div class="footer-bottom row">
+					<div class="col-lg-4 order-last order-lg-0">
+						<h2 class="footer-heading">Contact information</h2>
+						<ul class="footer-info">
+							<li>
+								<span>
+									<img src="assets/images/icons/email.svg" alt="icon" />
+								</span>
+								<p>info@obsidian.club</p>
+							</li>
+							<li>
+								<span>
+									<img src="assets/images/icons/phone.svg" alt="icon" />
+								</span>
+								<p>+38(050)000-00-00</p>
+							</li>
+							<li>
+								<span>
+									<img src="assets/images/icons/pin.svg" alt="icon" />
+								</span>
+								<p>17, Billingsgate Avenue, London, E17 4RD</p>
+							</li>
+						</ul>
+						<!-- social link -->
+						<ul class="footer-social-link">
+							<li>
+								<a href="#">
+									<img src="assets/images/icons/ig.svg" alt="icon" />
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<img src="assets/images/icons/fb.svg" alt="icon" />
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<img
+										src="assets/images/icons/twitter.svg"
+										alt="icon"
+									/>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<img
+										src="assets/images/icons/youtube.svg"
+										alt="icon"
+									/>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="col-lg-2 offset-lg-1 col-md-4 col-6">
+						<div>
+							<h2 class="footer-heading">Membership</h2>
+							<ul class="footer-info">
+								<li>
+									<a href="#">My Account</a>
+								</li>
+								<li>
+									<a href="#">What is Obsidian Tier?</a>
+								</li>
+								<li>
+									<a href="#">Benefits</a>
+								</li>
+								<li>
+									<a href="#">FAQs</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-2 col-md-4 col-6">
+						<div>
+							<h2 class="footer-heading">Events</h2>
+							<ul class="footer-info">
+								<li>
+									<a href="#">Day Events</a>
+								</li>
+								<li>
+									<a href="#"> Night Events </a>
+								</li>
+								<li>
+									<a href="#">Obsidian Events</a>
+								</li>
+								<li>
+									<a href="#">Weekend Away</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-4 col-6">
+						<div>
+							<h2 class="footer-heading">Explore</h2>
+							<ul class="footer-info">
+								<li>
+									<a href="#">Home</a>
+								</li>
+								<li>
+									<a href="#">Event Calendar</a>
+								</li>
+								<li>
+									<a href="#">About Us</a>
+								</li>
+								<li>
+									<a href="#">Contact Us</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer-copyright">
+				<div class="container">
+					<p>CopyRight @ 2022 The Obsidian Club</p>
+				</div>
+			</div>
+		</footer>
+		<!-- footer section end  -->
+
+		<!-- All js Goes here -->
+		<script src="assets/js/jquery-3.6.0.min.js"></script>
+		<script src="assets/js/bootstrap.bundle.min.js"></script>
+		<script src="assets/js/swiper-bundle.min.js"></script>
+		<script src="assets/js/app.js"></script>
+	</body>
+</html>
