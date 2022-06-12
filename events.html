@@ -21,6 +21,7 @@
 		<!-- Library  -->
 		<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
 		<link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+		<link rel="stylesheet" href="assets/css/calendar.css" />
 		<!-- Main css -->
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="assets/css/main.css.map" />
@@ -175,18 +176,7 @@
 			<div class="container">
 				<!-- heading  -->
 				<div class="row">
-					<div class="col-md-4 offset-lg-4">
-						<div class="event-year">
-							<span>
-								<img src="assets/images/icons/s-left.svg" alt="icon" />
-							</span>
-							<div class="event-year__value">april 2022</div>
-							<span>
-								<img src="assets/images/icons/s-right.svg" alt="icon" />
-							</span>
-						</div>
-					</div>
-					<div class="col-md-4 offset-md-4 offset-lg-0">
+					<div class="col-md-4 offset-md-8">
 						<ul class="nav nav-tabs" id="myTab" role="tablist">
 							<li class="nav-item" role="presentation">
 								<button
@@ -229,7 +219,7 @@
 						aria-labelledby="calendar-tab"
 						tabindex="0"
 					>
-						...
+						<div id="calendar"></div>
 					</div>
 					<div
 						class="tab-pane fade"
@@ -537,6 +527,113 @@
 		<script src="assets/js/jquery-3.6.0.min.js"></script>
 		<script src="assets/js/bootstrap.bundle.min.js"></script>
 		<script src="assets/js/swiper-bundle.min.js"></script>
+		<script src="assets/js/calendar.js"></script>
 		<script src="assets/js/app.js"></script>
+
+		<script>
+			document.addEventListener("DOMContentLoaded", function () {
+				var calendarEl = document.getElementById("calendar")
+				var calendar = new FullCalendar.Calendar(calendarEl, {
+					initialView: "dayGridMonth",
+					headerToolbar: {
+						left: "",
+						center: "prev,title,next",
+						right: "",
+					},
+					dayHeaderFormat: {
+						weekday: "long",
+					},
+					events: [
+						{
+							start: "2022-06-01",
+							image_url: "assets/images/calendar/1.png",
+						},
+						{
+							start: "2022-06-04",
+							image_url: "assets/images/calendar/2.png",
+						},
+						{
+							start: "2022-06-08",
+							image_url: "assets/images/calendar/3.png",
+						},
+						{
+							start: "2022-06-28",
+							image_url: "assets/images/calendar/4.png",
+						},
+						{
+							start: "2022-06-16",
+							image_url: "assets/images/calendar/5.png",
+						},
+						{
+							start: "2022-06-18",
+							image_url: "assets/images/calendar/6.png",
+						},
+						{
+							start: "2022-06-17",
+							image_url: "assets/images/calendar/7.png",
+						},
+						{
+							start: "2022-05-30",
+							image_url: "assets/images/calendar/9.png",
+						},
+						{
+							start: "2022-06-30",
+							image_url: "assets/images/calendar/10.png",
+						},
+						{
+							start: "2022-06-20",
+							image_url: "assets/images/calendar/13.png",
+						},
+						{
+							start: "2022-06-12",
+							image_url: "assets/images/calendar/12.png",
+						},
+						{
+							start: "2022-07-05",
+							image_url: "assets/images/calendar/14.png",
+						},
+						{
+							start: "2022-07-08",
+							image_url: "assets/images/calendar/15.png",
+						},
+						{
+							start: "2022-06-22",
+							image_url: "assets/images/calendar/16.png",
+						},
+						{
+							start: "2022-06-14",
+							image_url: "assets/images/calendar/17.png",
+						},
+						{
+							start: "2022-06-10",
+							image_url: "assets/images/calendar/18.png",
+						},
+					],
+					eventContent: function (arg) {
+						let arrayOfDomNodes = []
+						// title event
+						let titleEvent = document.createElement("div")
+						if (arg.event._def.title) {
+							titleEvent.innerHTML = arg.event._def.title
+							titleEvent.classList = "fc-event-title fc-sticky"
+						}
+
+						// image event
+						let imgEventWrap = document.createElement("div")
+						if (arg.event.extendedProps.image_url) {
+							let imgEvent =
+								'<img src="' + arg.event.extendedProps.image_url + '" >'
+							imgEventWrap.classList = "fc-event-img"
+							imgEventWrap.innerHTML = imgEvent
+						}
+
+						arrayOfDomNodes = [titleEvent, imgEventWrap]
+
+						return { domNodes: arrayOfDomNodes }
+					},
+				})
+				calendar.render()
+			})
+		</script>
 	</body>
 </html>

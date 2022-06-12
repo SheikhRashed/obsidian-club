@@ -1,0 +1,164 @@
+table {
+	padding-right: 24px;
+}
+table,
+.fc-theme-standard td,
+.fc-theme-standard th {
+	border: 0px !important;
+}
+
+// Week days
+.fc-col-header {
+	margin-bottom: 24px;
+}
+
+.fc-scrollgrid-sync-inner a {
+	@extend %fs-1;
+	font-weight: 600;
+	text-transform: uppercase;
+	color: rgba(255, 255, 255, 0.5);
+}
+
+.fc-scroller {
+	overflow-x: hidden !important;
+
+	/* width */
+	&::-webkit-scrollbar {
+		width: 2px;
+	}
+
+	/* Track */
+	&::-webkit-scrollbar-track {
+		background: #f1f1f1;
+	}
+
+	/* Handle */
+	&::-webkit-scrollbar-thumb {
+		background: #888;
+	}
+
+	/* Handle on hover */
+	&::-webkit-scrollbar-thumb:hover {
+		background: #555;
+	}
+}
+
+// table body day
+.fc-daygrid-day {
+	width: 100%;
+	height: 144px;
+	margin: 8px auto;
+	overflow: hidden;
+	position: relative;
+	border-radius: 10px;
+	background: #0c0c0c;
+}
+
+.fc-event-img {
+	width: 100%;
+	height: 144px;
+
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}
+
+.fc .fc-daygrid-day-number {
+	top: 0;
+	right: 0;
+	z-index: 9;
+	position: absolute;
+}
+
+.fc-scrollgrid-sync-table {
+	tbody {
+		tr {
+			display: grid;
+			gap: 16px;
+			grid-template-columns: repeat(auto-fit, minmax(144px, 1fr));
+
+			@include max(1200px) {
+				grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+			}
+
+			// grid-template-columns: repeat(7, 1fr);
+
+			td {
+			}
+		}
+	}
+}
+
+.fc-daygrid-day-number {
+	width: 30px;
+	height: 30px;
+	display: flex;
+	font-size: 16px;
+	font-weight: 600;
+	align-items: center;
+	line-height: 19.36px;
+	justify-content: center;
+	text-transform: uppercase;
+	border-bottom-left-radius: 10px;
+	background: linear-gradient(308.51deg, #ff9e67 -0.02%, #da6b05 100.01%);
+}
+
+.fc-toolbar-chunk > div {
+	display: flex;
+	top: 80px;
+	left: calc(50% - 24px);
+	position: absolute;
+	align-items: flex-start;
+	transform: translateX(-50%);
+
+	@include max(767px) {
+		position: static;
+		transform: translate(0);
+	}
+
+	.fc-toolbar-title {
+		color: #fff;
+		font-size: 21px;
+		font-weight: 600;
+		margin: 0px 45px;
+		position: relative;
+		white-space: nowrap;
+		line-height: 25.41px;
+		padding-bottom: 16px;
+		text-transform: uppercase;
+		&::after {
+			content: "";
+			top: 100%;
+			left: 50%;
+			width: 100%;
+			height: 2px;
+			position: absolute;
+			transform: translateX(-50%);
+			background: linear-gradient(
+				90deg,
+				rgba(196, 196, 196, 0) 0%,
+				#ff9f2f 52.08%,
+				rgba(196, 196, 196, 0) 100%
+			);
+		}
+	}
+
+	.fc-button {
+		padding: 0;
+		border: 0;
+		border-radius: 0px;
+		background-color: transparent;
+
+		&:hover,
+		&:focus,
+		&:active {
+			border: 0 !important;
+			padding: 0px !important;
+			outline: none !important;
+			box-shadow: none !important;
+			background-color: transparent !important;
+		}
+	}
+}

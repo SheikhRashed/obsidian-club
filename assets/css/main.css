@@ -1,5 +1,5 @@
 .join-btn, .input-field input, .input-field-two input, .input-field-two .bv_mainselect .bv_atual, .event-card__date p, .section-heading p, .header-menu li a, .header .mobile-menu ul li a, .header--login .mobile-action .profile-info a, .info-text blockquote p, .perks-content .perks-item p, .booking-info p, .faqs .accordion-body blockquote p, .membership-form__card .nav-link, .summary-card__content ul li p:nth-child(1), .settings-profile .profile-card__info p,
-.settings-profile .profile-card__info button, .settings-profile .profile-info ul li span, .settings-profile .profile-info button, .settings-event .events li .event-card__info > div span, .settings-event .events li .event-card__info > div p, .settings-event .events li .event-card__info .more, .settings-membership .membership-content .promo-info h2, .settings-membership .membership-content .info-content li span, .settings-account .box button, .footer-top p, .footer-copyright p, .footer-info li p,
+.settings-profile .profile-card__info button, .settings-profile .profile-info ul li span, .settings-profile .profile-info button, .settings-event .events li .event-card__info > div span, .settings-event .events li .event-card__info > div p, .settings-event .events li .event-card__info .more, .settings-membership .membership-content .promo-info h2, .settings-membership .membership-content .info-content li span, .settings-account .box button, .fc-scrollgrid-sync-inner a, .footer-top p, .footer-copyright p, .footer-info li p,
 .footer-info li a, .footer-contact .button {
   font-size: 14px;
   font-weight: 400;
@@ -2237,50 +2237,6 @@ section .section-heading {
   background-color: #000;
 }
 
-.event-year {
-  display: flex;
-}
-
-@media (min-width: 1200px) {
-  .event-year {
-    margin-left: 80px;
-  }
-}
-
-@media (max-width: 767px) {
-  .event-year {
-    margin-bottom: 24px;
-    justify-content: center;
-  }
-}
-
-.event-year__value {
-  color: #fff;
-  font-size: 21px;
-  font-weight: 600;
-  margin: 0px 45px;
-  position: relative;
-  white-space: nowrap;
-  line-height: 25.41px;
-  padding-bottom: 16px;
-  text-transform: uppercase;
-}
-
-.event-year__value::after {
-  content: "";
-  top: 100%;
-  left: 50%;
-  width: 100%;
-  height: 2px;
-  position: absolute;
-  transform: translateX(-50%);
-  background: linear-gradient(90deg, rgba(196, 196, 196, 0) 0%, #ff9f2f 52.08%, rgba(196, 196, 196, 0) 100%);
-}
-
-.event-year span {
-  cursor: pointer;
-}
-
 .event .nav {
   border: 0;
   width: 190px;
@@ -4129,6 +4085,158 @@ section .section-heading {
   display: flex;
   margin-top: 24px;
   justify-content: center;
+}
+
+table {
+  padding-right: 24px;
+}
+
+table,
+.fc-theme-standard td,
+.fc-theme-standard th {
+  border: 0px !important;
+}
+
+.fc-col-header {
+  margin-bottom: 24px;
+}
+
+.fc-scrollgrid-sync-inner a {
+  font-weight: 600;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.fc-scroller {
+  overflow-x: hidden !important;
+  /* width */
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+}
+
+.fc-scroller::-webkit-scrollbar {
+  width: 2px;
+}
+
+.fc-scroller::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.fc-scroller::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+.fc-scroller::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.fc-daygrid-day {
+  width: 100%;
+  height: 144px;
+  margin: 8px auto;
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px;
+  background: #0c0c0c;
+}
+
+.fc-event-img {
+  width: 100%;
+  height: 144px;
+}
+
+.fc-event-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.fc .fc-daygrid-day-number {
+  top: 0;
+  right: 0;
+  z-index: 9;
+  position: absolute;
+}
+
+.fc-scrollgrid-sync-table tbody tr {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(144px, 1fr));
+}
+
+@media (max-width: 1200px) {
+  .fc-scrollgrid-sync-table tbody tr {
+    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+  }
+}
+
+.fc-daygrid-day-number {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  font-size: 16px;
+  font-weight: 600;
+  align-items: center;
+  line-height: 19.36px;
+  justify-content: center;
+  text-transform: uppercase;
+  border-bottom-left-radius: 10px;
+  background: linear-gradient(308.51deg, #ff9e67 -0.02%, #da6b05 100.01%);
+}
+
+.fc-toolbar-chunk > div {
+  display: flex;
+  top: 80px;
+  left: calc(50% - 24px);
+  position: absolute;
+  align-items: flex-start;
+  transform: translateX(-50%);
+}
+
+@media (max-width: 767px) {
+  .fc-toolbar-chunk > div {
+    position: static;
+    transform: translate(0);
+  }
+}
+
+.fc-toolbar-chunk > div .fc-toolbar-title {
+  color: #fff;
+  font-size: 21px;
+  font-weight: 600;
+  margin: 0px 45px;
+  position: relative;
+  white-space: nowrap;
+  line-height: 25.41px;
+  padding-bottom: 16px;
+  text-transform: uppercase;
+}
+
+.fc-toolbar-chunk > div .fc-toolbar-title::after {
+  content: "";
+  top: 100%;
+  left: 50%;
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  transform: translateX(-50%);
+  background: linear-gradient(90deg, rgba(196, 196, 196, 0) 0%, #ff9f2f 52.08%, rgba(196, 196, 196, 0) 100%);
+}
+
+.fc-toolbar-chunk > div .fc-button {
+  padding: 0;
+  border: 0;
+  border-radius: 0px;
+  background-color: transparent;
+}
+
+.fc-toolbar-chunk > div .fc-button:hover, .fc-toolbar-chunk > div .fc-button:focus, .fc-toolbar-chunk > div .fc-button:active {
+  border: 0 !important;
+  padding: 0px !important;
+  outline: none !important;
+  box-shadow: none !important;
+  background-color: transparent !important;
 }
 
 .footer {
