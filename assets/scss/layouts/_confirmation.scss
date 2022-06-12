@@ -1,0 +1,32 @@
+.confirm {
+	height: 100vh;
+	display: flex;
+	position: relative;
+	align-items: center;
+	justify-content: center;
+	background-color: #0f0f0f;
+
+	&-content {
+		text-align: center;
+
+		span {
+			margin-bottom: 24px;
+			display: inline-block;
+		}
+
+		h2 {
+			color: #fff;
+			font-size: 24px;
+			font-weight: 600;
+			margin-bottom: 8px;
+			line-height: 29.05px;
+			text-transform: capitalize;
+		}
+
+		p {
+			@extend %fs-2;
+			color: #b5b5b5;
+			margin-bottom: 36px;
+		}
+	}
+}

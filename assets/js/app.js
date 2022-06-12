@@ -1,5 +1,23 @@
 "use strict"
 
+// loader
+const loader = document.querySelector(".loader")
+const main = document.querySelector(".main")
+
+if (main) {
+	function init() {
+		setTimeout(() => {
+			loader.style.opacity = 0
+			loader.style.display = "none"
+
+			main.style.display = "block"
+			setTimeout(() => (main.style.opacity = 1), 50)
+		}, 1600)
+	}
+
+	init()
+}
+
 // mobile Nav Sidebar
 
 const toggleBtn = document.querySelector(".toggleBtn")
@@ -225,19 +243,10 @@ if (document.querySelector(".event-slider")) {
 			prevEl: ".swiper-button-prev",
 		},
 
-		// breakpoints: {
-		// 	575: {
-		// 		slidesPerView: 2,
-		// 	},
-
-		// 	992: {
-		// 		slidesPerView: 3,
-		// 	},
-
-		// 	1200: {
-		// 		slidesPerView: 4,
-		// 	},
-		// },
+		autoplay: {
+			delay: 1600,
+			disableOnInteraction: false,
+		},
 	})
 }
 
@@ -301,9 +310,12 @@ document.addEventListener("DOMContentLoaded", function () {
 })
 
 // Light Gallery
-lightGallery(document.getElementById("galleryBox"), {
-	animateThumb: false,
-	zoomFromOrigin: false,
-	allowMediaOverlap: true,
-	toggleThumb: true,
-})
+
+if (document.getElementById("galleryBox")) {
+	lightGallery(document.getElementById("galleryBox"), {
+		animateThumb: false,
+		zoomFromOrigin: false,
+		allowMediaOverlap: true,
+		toggleThumb: true,
+	})
+}
