@@ -731,14 +731,18 @@ body {
   line-height: 19.36px;
 }
 
-.booking-card button {
+.booking-card button,
+.booking-card a {
   width: 90%;
   margin: 24px 16px;
   font-size: 14px;
   padding: 20px 0px;
   border-radius: 6px;
   line-height: 16.94px;
+  color: #131313;
+  display: inline-block;
   background-color: #fff;
+  text-transform: uppercase;
 }
 
 .event-box {
@@ -2567,10 +2571,12 @@ section .section-heading {
   background: linear-gradient(90deg, #ff9f2f 0%, rgba(196, 196, 196, 0) 100%);
 }
 
-.membership-tier .heading button {
+.membership-tier .heading button,
+.membership-tier .heading a {
   font-size: 14px;
   line-height: 16.94px;
   text-transform: uppercase;
+  display: inline-block;
   color: rgba(255, 255, 255, 0.5);
 }
 
@@ -3795,7 +3801,8 @@ section .section-heading {
   color: rgba(175, 175, 175, 0.8);
 }
 
-.auth-info button {
+.auth-info button,
+.auth-info .submit-btn {
   width: 230px;
   height: 50px;
   font-size: 14px;
@@ -3803,12 +3810,16 @@ section .section-heading {
   color: #0b0e16;
   border-radius: 6px;
   line-height: 16.94px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #fff;
-  text-transform: capitalize;
+  text-transform: uppercase;
 }
 
 @media (max-width: 767px) {
-  .auth-info button {
+  .auth-info button,
+  .auth-info .submit-btn {
     width: 100%;
   }
 }

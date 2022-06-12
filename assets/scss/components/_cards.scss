@@ -454,14 +454,18 @@
 		}
 	}
 
-	button {
+	button,
+	a {
 		width: 90%;
 		margin: 24px 16px;
 		font-size: 14px;
 		padding: 20px 0px;
 		border-radius: 6px;
 		line-height: 16.94px;
+		color: #131313;
+		display: inline-block;
 		background-color: #fff;
+		text-transform: uppercase;
 	}
 }
 

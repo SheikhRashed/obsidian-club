@@ -54,10 +54,12 @@
 			}
 		}
 
-		button {
+		button,
+		a {
 			font-size: 14px;
 			line-height: 16.94px;
 			text-transform: uppercase;
+			display: inline-block;
 			color: hsla(0, 0%, 100%, 0.5);
 		}
 	}

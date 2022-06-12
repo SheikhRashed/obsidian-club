@@ -27,128 +27,171 @@
 	</head>
 
 	<body>
-		<!-- header section start  -->
-		<header class="header header--login">
-			<div class="container">
-				<div class="header-content">
-					<!-- header menu  -->
+		<div class="main">
+			<!-- header section start  -->
+			<header class="header header--login">
+				<div class="container">
+					<div class="header-content">
+						<!-- header menu  -->
 
-					<a href="#" class="logo logo-sm">
-						<img src="assets/images/logo/logo-sm.png" alt="logo" />
-					</a>
+						<a href="#" class="logo logo-sm">
+							<img src="assets/images/logo/logo-sm.png" alt="logo" />
+						</a>
 
-					<div class="header-right">
-						<ul class="header-menu">
+						<div class="header-right">
+							<ul class="header-menu">
+								<li>
+									<a href="#" class="active-link">Home</a>
+								</li>
+								<li>
+									<a href="events.html">Event Calendar</a>
+								</li>
+								<li>
+									<a href="vip-corner.html">VIP Corner</a>
+								</li>
+								<li>
+									<a href="gallery.html">Gallery</a>
+								</li>
+								<li>
+									<a href="#">Contact Us</a>
+								</li>
+							</ul>
+
+							<div class="mobile-action">
+								<div class="profile">
+									<div class="profile-img">
+										<img src="assets/images/user.png " alt="" />
+									</div>
+
+									<div class="dropdown profile-info">
+										<a
+											class="btn btn-secondary dropdown-toggle"
+											href="#"
+											role="button"
+											id="dropdownMenuLink"
+											data-bs-toggle="dropdown"
+											aria-expanded="false"
+										>
+											Mike
+											<span>
+												<img
+													src="assets/images/icons/chevron.svg"
+													alt=""
+												/>
+											</span>
+										</a>
+
+										<ul
+											class="dropdown-menu"
+											aria-labelledby="dropdownMenuLink"
+										>
+											<li>
+												<a
+													class="dropdown-item"
+													href="user-setting.html"
+													>My Profile</a
+												>
+											</li>
+											<li>
+												<a
+													class="dropdown-item"
+													href="user-setting.html"
+													>Bookings</a
+												>
+											</li>
+											<li>
+												<a
+													class="dropdown-item"
+													href="user-setting.html"
+													>Saved Events</a
+												>
+											</li>
+											<li>
+												<a
+													class="dropdown-item"
+													href="user-setting.html"
+													>Settings</a
+												>
+											</li>
+											<li>
+												<a class="dropdown-item" href="index.html"
+													>Log out</a
+												>
+											</li>
+										</ul>
+									</div>
+								</div>
+
+								<button class="toggle toggleBtn">
+									<span></span>
+									<span></span>
+									<span></span>
+								</button>
+							</div>
+						</div>
+					</div>
+
+					<div class="mobile-menu">
+						<ul>
 							<li>
-								<a href="#" class="active-link">Home</a>
+								<a href="#">Home</a>
 							</li>
 							<li>
-								<a href="#">Event Calendar</a>
+								<a href="#informationSection">Experience</a>
 							</li>
 							<li>
-								<a href="#">VIP Corner</a>
+								<a href="#premiumSection">Premium Access</a>
 							</li>
 							<li>
-								<a href="#">Gallery</a>
+								<a href="#faqSection">Faqs</a>
 							</li>
 							<li>
-								<a href="#">Contact Us</a>
+								<a href="#aboutSection">About</a>
+							</li>
+							<li>
+								<a href="#contactSection">Contact us</a>
 							</li>
 						</ul>
+					</div>
+				</div>
+			</header>
+			<!-- header section end  -->
 
-						<div class="mobile-action">
-							<div class="profile">
-								<div class="profile-img">
-									<img src="assets/images/user.png " alt="" />
-								</div>
+			<section class="confirm">
+				<div class="container">
+					<div class="confirm-content">
+						<!-- icon -->
+						<span>
+							<img src="assets/images/success.svg" alt="icon" />
+						</span>
+						<h2>Booking done successfully!</h2>
+						<p>You can check your bookings details from settings screens</p>
+						<a href="user-setting.html" class="button">Booking Details</a>
+					</div>
+				</div>
+			</section>
+		</div>
 
-								<div class="dropdown profile-info">
-									<a
-										class="btn btn-secondary dropdown-toggle"
-										href="#"
-										role="button"
-										id="dropdownMenuLink"
-										data-bs-toggle="dropdown"
-										aria-expanded="false"
-									>
-										Mike
-										<span>
-											<img
-												src="assets/images/icons/chevron.svg"
-												alt=""
-											/>
-										</span>
-									</a>
+		<!-- Loader  -->
+		<div class="loader">
+			<div class="container">
+				<div class="loader-content">
+					<div class="loader-logo">
+						<img src="assets/images/logo/footer-logo.png" alt="" />
+					</div>
 
-									<ul
-										class="dropdown-menu"
-										aria-labelledby="dropdownMenuLink"
-									>
-										<li>
-											<a class="dropdown-item" href="#">Action</a>
-										</li>
-										<li>
-											<a class="dropdown-item" href="#"
-												>Another action</a
-											>
-										</li>
-										<li>
-											<a class="dropdown-item" href="#"
-												>Something else here</a
-											>
-										</li>
-									</ul>
-								</div>
-							</div>
+					<h2>Please wait while we create a premium space for you</h2>
+					<p>Do not go back or refresh the page</p>
 
-							<button class="toggle toggleBtn">
-								<span></span>
-								<span></span>
-								<span></span>
-							</button>
+					<div class="snippet" data-title=".dot-pulse">
+						<div class="stage">
+							<div class="dot-pulse"></div>
 						</div>
 					</div>
 				</div>
-
-				<div class="mobile-menu">
-					<ul>
-						<li>
-							<a href="#">Home</a>
-						</li>
-						<li>
-							<a href="#informationSection">Experience</a>
-						</li>
-						<li>
-							<a href="#premiumSection">Premium Access</a>
-						</li>
-						<li>
-							<a href="#faqSection">Faqs</a>
-						</li>
-						<li>
-							<a href="#aboutSection">About</a>
-						</li>
-						<li>
-							<a href="#contactSection">Contact us</a>
-						</li>
-					</ul>
-				</div>
 			</div>
-		</header>
-		<!-- header section end  -->
+		</div>
 
-		<section class="confirm">
-			<div class="container">
-				<div class="confirm-content">
-					<!-- icon -->
-					<span>
-						<img src="assets/images/success.svg" alt="icon" />
-					</span>
-					<h2>Booking done successfully!</h2>
-					<p>You can check your bookings details from settings screens</p>
-					<button class="button">Booking Details</button>
-				</div>
-			</div>
-		</section>
 		<!-- All js Goes here -->
 		<script src="assets/js/jquery-3.6.0.min.js"></script>
 		<script src="assets/js/bootstrap.bundle.min.js"></script>

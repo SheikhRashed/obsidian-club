@@ -193,7 +193,8 @@
 			color: rgba(175, 175, 175, 0.8);
 		}
 
-		button {
+		button,
+		.submit-btn {
 			width: 230px;
 			height: 50px;
 			font-size: 14px;
@@ -201,8 +202,11 @@
 			color: #0b0e16;
 			border-radius: 6px;
 			line-height: 16.94px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
 			background-color: #fff;
-			text-transform: capitalize;
+			text-transform: uppercase;
 
 			@include max(767px) {
 				width: 100%;
