@@ -12,10 +12,8 @@
 		padding: 40px 0px;
 		align-items: center;
 		position: relative;
+		transition: all 0.3s linear;
 		justify-content: space-between;
-
-		@include max(1200px) {
-		}
 
 		@include max(991px) {
 			padding: 18px 0px;
@@ -219,6 +217,10 @@
 	&.sticky {
 		background: linear-gradient(180deg, #000000 0%, #202020 100%);
 		.header {
+			&-content {
+				padding: 28px 0px;
+			}
+
 			&-logo {
 				.logo-lg {
 					@include min(992px) {

@@ -1068,6 +1068,7 @@ section .section-heading {
   padding: 40px 0px;
   align-items: center;
   position: relative;
+  transition: all 0.3s linear;
   justify-content: space-between;
 }
 
@@ -1286,6 +1287,10 @@ section .section-heading {
 
 .header.sticky {
   background: linear-gradient(180deg, #000000 0%, #202020 100%);
+}
+
+.header.sticky .header-content {
+  padding: 28px 0px;
 }
 
 @media (min-width: 992px) {
