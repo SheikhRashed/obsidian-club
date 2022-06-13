@@ -73,4 +73,21 @@
 			}
 		}
 	}
+
+	&-content-contact {
+		display: flex;
+		justify-content: center;
+		& > div {
+			text-align: center;
+			padding-top: 40px;
+
+			p {
+				@extend %fs-2;
+				font-weight: 400;
+				max-width: 620px;
+				margin-bottom: 30px;
+				color: rgba(255, 255, 255, 0.8);
+			}
+		}
+	}
 }

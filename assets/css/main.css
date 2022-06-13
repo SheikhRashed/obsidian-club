@@ -6,7 +6,7 @@
   line-height: 16.94px;
 }
 
-.settings-event .nav-link, .settings-membership .membership-content .badge-title h2, .settings-account .box .title, .settings-account .account-preference__content .form-switch label, .auth-heading > div p, .confirm-content p {
+.faqs-content-contact > div p, .settings-event .nav-link, .settings-membership .membership-content .badge-title h2, .settings-account .box .title, .settings-account .account-preference__content .form-switch label, .auth-heading > div p, .confirm-content p {
   font-size: 16px;
   font-weight: 600;
   line-height: 19.36px;
@@ -2236,6 +2236,23 @@ section .section-heading {
 
 .faqs .accordion-body blockquote p {
   margin: 0;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.faqs-content-contact {
+  display: flex;
+  justify-content: center;
+}
+
+.faqs-content-contact > div {
+  text-align: center;
+  padding-top: 40px;
+}
+
+.faqs-content-contact > div p {
+  font-weight: 400;
+  max-width: 620px;
+  margin-bottom: 30px;
   color: rgba(255, 255, 255, 0.8);
 }
 
