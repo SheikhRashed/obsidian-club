@@ -218,7 +218,9 @@
 		background: linear-gradient(180deg, #000000 0%, #202020 100%);
 		.header {
 			&-content {
-				padding: 28px 0px;
+				@include min(992px) {
+					padding: 28px 0px;
+				}
 			}
 
 			&-logo {

@@ -1287,8 +1287,10 @@ section .section-heading {
   background: linear-gradient(180deg, #000000 0%, #202020 100%);
 }
 
-.header.sticky .header-content {
-  padding: 28px 0px;
+@media (min-width: 992px) {
+  .header.sticky .header-content {
+    padding: 28px 0px;
+  }
 }
 
 @media (min-width: 992px) {
@@ -1764,7 +1766,7 @@ section .section-heading {
 }
 
 .partners-content-item a img:hover {
-  filter: grayscale(0);
+  filter: grayscale(0%) brightness(1.5) contrast(1.5);
 }
 
 .partners-action {
