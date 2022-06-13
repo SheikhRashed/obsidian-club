@@ -360,13 +360,13 @@ body {
   width: 90%;
   bottom: 20px;
   transform: translateX(-50%);
-  border: 24px solid #141414;
+  border: 20px solid #141414;
   border-left: 15px solid transparent;
   border-right: 15px solid transparent;
 }
 
 .event-card__name p {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 21.78px;
   text-transform: uppercase;
   font-weight: 600;
@@ -1732,6 +1732,7 @@ section .section-heading {
 .partners-content {
   gap: 44px;
   display: grid;
+  overflow: hidden;
   grid-template-columns: repeat(5, 1fr);
 }
 
@@ -1758,7 +1759,9 @@ section .section-heading {
 }
 
 .partners-content-item a img {
-  filter: grayscale(100%);
+  max-width: 100%;
+  object-fit: cover;
+  filter: grayscale(100);
   transition: all 0.3s linear;
 }
 

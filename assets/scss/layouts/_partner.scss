@@ -40,6 +40,7 @@
 	&-content {
 		gap: 44px;
 		display: grid;
+		overflow: hidden;
 		grid-template-columns: repeat(5, 1fr);
 
 		@include max(1440px) {
@@ -58,7 +59,9 @@
 			text-align: center;
 			a {
 				img {
-					filter: grayscale(100%);
+					max-width: 100%;
+					object-fit: cover;
+					filter: grayscale(100);
 					transition: all 0.3s linear;
 					&:hover {
 						filter: grayscale(0);

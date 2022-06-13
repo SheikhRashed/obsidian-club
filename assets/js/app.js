@@ -12,7 +12,7 @@ if (main) {
 
 			main.style.display = "block"
 			setTimeout(() => (main.style.opacity = 1), 50)
-		}, 1600)
+		}, 1200)
 	}
 
 	init()
