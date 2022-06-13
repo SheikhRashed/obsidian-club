@@ -98,25 +98,5 @@
 				}
 			}
 		}
-
-		&.date {
-			input {
-				color: transparent;
-				font-size: 16px;
-				line-height: 19.36px;
-				padding-left: 32px;
-
-				&:focus {
-					color: #fff;
-					font-size: 12px;
-				}
-			}
-			span {
-				top: calc(50% - 4px);
-				left: 16px;
-				position: absolute;
-				transform: translateY(-50%);
-			}
-		}
 	}
 }

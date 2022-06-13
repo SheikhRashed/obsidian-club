@@ -79,13 +79,8 @@ table,
 			gap: 16px;
 			grid-template-columns: repeat(auto-fit, minmax(144px, 1fr));
 
-			@include max(1200px) {
+			@include max(1440px) {
 				grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
-			}
-
-			// grid-template-columns: repeat(7, 1fr);
-
-			td {
 			}
 		}
 	}

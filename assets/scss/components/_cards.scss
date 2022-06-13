@@ -485,6 +485,7 @@
 	.img {
 		width: 300px;
 		height: 100%;
+		flex-shrink: 0;
 		overflow: hidden;
 		position: relative;
 		@include min(992px) {
@@ -541,6 +542,7 @@
 
 	.info {
 		padding: 0;
+		width: 100%;
 		@include max(991px) {
 			padding: 24px;
 			padding-top: 0px;
@@ -628,6 +630,14 @@
 					text-transform: uppercase;
 				}
 			}
+		}
+
+		&-overlay {
+			right: 0;
+			top: 50%;
+			position: absolute;
+			pointer-events: none;
+			transform: translateY(-50%);
 		}
 	}
 }

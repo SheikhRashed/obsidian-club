@@ -75,10 +75,17 @@ button:focus {
 }
 
 /* Hide Calendar Icon In Chrome */
-input[type="date"]::-webkit-inner-spin-button,
 input[type="date"]::-webkit-calendar-picker-indicator {
-  display: none;
-  -webkit-appearance: none;
+  color: rgba(0, 0, 0, 0);
+  opacity: 1;
+  display: block;
+  width: 24px;
+  height: 24px;
+  border-width: thin;
+}
+
+::-webkit-calendar-picker-indicator {
+  filter: invert(0.5);
 }
 
 a {
@@ -309,25 +316,6 @@ body {
 
 .input-field-two .bv_ul_inner li:hover {
   color: #1b1b1b;
-}
-
-.input-field-two.date input {
-  color: transparent;
-  font-size: 16px;
-  line-height: 19.36px;
-  padding-left: 32px;
-}
-
-.input-field-two.date input:focus {
-  color: #fff;
-  font-size: 12px;
-}
-
-.input-field-two.date span {
-  top: calc(50% - 4px);
-  left: 16px;
-  position: absolute;
-  transform: translateY(-50%);
 }
 
 .event-card {
@@ -764,6 +752,7 @@ body {
 .event-box .img {
   width: 300px;
   height: 100%;
+  flex-shrink: 0;
   overflow: hidden;
   position: relative;
 }
@@ -825,6 +814,7 @@ body {
 
 .event-box .info {
   padding: 0;
+  width: 100%;
 }
 
 @media (max-width: 991px) {
@@ -923,6 +913,14 @@ body {
   line-height: 16.94px;
   white-space: nowrap;
   text-transform: uppercase;
+}
+
+.event-box .info-overlay {
+  right: 0;
+  top: 50%;
+  position: absolute;
+  pointer-events: none;
+  transform: translateY(-50%);
 }
 
 .dot-pulse {
@@ -2519,7 +2517,6 @@ section .section-heading {
 }
 
 .membership-tier {
-  height: 100vh;
   padding: 80px 0px;
   position: relative;
   background-color: #131313;
@@ -4189,7 +4186,7 @@ table,
   grid-template-columns: repeat(auto-fit, minmax(144px, 1fr));
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1440px) {
   .fc-scrollgrid-sync-table tbody tr {
     grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
   }

@@ -88,23 +88,17 @@
 										aria-labelledby="dropdownMenuLink"
 									>
 										<li>
-											<a
-												class="dropdown-item"
-												href="user-setting.html"
+											<a class="dropdown-item" href="profile.html"
 												>My Profile</a
 											>
 										</li>
 										<li>
-											<a
-												class="dropdown-item"
-												href="user-setting.html"
+											<a class="dropdown-item" href="bookings.html"
 												>Bookings</a
 											>
 										</li>
 										<li>
-											<a
-												class="dropdown-item"
-												href="user-setting.html"
+											<a class="dropdown-item" href="s-events.html"
 												>Saved Events</a
 											>
 										</li>
@@ -305,6 +299,13 @@
 
 												<a href="#">Premium Perks</a>
 											</div>
+										</div>
+
+										<div class="info-overlay">
+											<img
+												src="assets/images/overlay.png"
+												alt="icon"
+											/>
 										</div>
 									</div>
 								</div>
@@ -621,8 +622,10 @@
 						// image event
 						let imgEventWrap = document.createElement("div")
 						if (arg.event.extendedProps.image_url) {
-							let imgEvent =
-								'<img src="' + arg.event.extendedProps.image_url + '" >'
+							let imgEvent = `
+								<a href="event-details.html">
+									<img src=" ${arg.event.extendedProps.image_url}" >
+								</a>`
 							imgEventWrap.classList = "fc-event-img"
 							imgEventWrap.innerHTML = imgEvent
 						}
