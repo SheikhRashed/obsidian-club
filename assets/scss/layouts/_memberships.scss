@@ -1,7 +1,12 @@
 .membership-tier {
 	padding: 80px 0px;
 	position: relative;
+	padding-bottom: 200px;
 	background-color: #131313;
+
+	@include max(1200px) {
+		padding: 80px 0px;
+	}
 
 	@include max(991px) {
 		height: auto;
